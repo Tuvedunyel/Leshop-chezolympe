@@ -1,0 +1,25 @@
+@use "../abstracts" as var;
+
+.cart-link {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  .cart-products-count {
+    position: absolute;
+    color: white;
+    line-height: 0;
+    font-size: 2.5rem;
+    font-weight: var.$bold;
+    bottom: -2%;
+    right: -7%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var.$lightOrange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

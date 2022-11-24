@@ -1,0 +1,85 @@
+@use "../abstracts" as var;
+
+.header__container {
+  width: 95%;
+  margin: 0 0 0 12rem;
+  display: grid;
+  grid-template-columns: 157px 0.8fr 0.2fr;
+  place-items: center;
+  gap: 8.2rem;
+
+  .logo_details {
+    width: 100%;
+  }
+
+  nav.menu {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 0.3fr;
+    place-items: center;
+
+    div.menu {
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a {
+      font-family: var.$gallery;
+      font-size: 22px;
+      font-weight: 400px;
+      color: var.$gray;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: var.$mediumOrange !important;
+      }
+    }
+  }
+
+  #search_widget form {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    &::after {
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("../img/search-icons.svg") no-repeat center;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+    i {
+      display: none;
+    }
+
+    input {
+      display: block;
+      max-width: 85%;
+      background: transparent;
+      color: var.$gray;
+      padding-inline: 0.5rem;
+      border-bottom: 2px solid var.$gray;
+      border-radius: 0;
+    }
+  }
+}
+
+#card-nav {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 0.6rem;
+}

@@ -5,11 +5,7 @@
     <div class="header__container">
       <section class="logo_details">
         {if $shop.logo_details}
-          {if $page.page_name == 'index'}
-            <h1>{renderLogo}</h1>
-          {else}
-            {renderLogo}
-          {/if}
+          {renderLogo}
         {/if}
       </section>
       <nav class="menu">
