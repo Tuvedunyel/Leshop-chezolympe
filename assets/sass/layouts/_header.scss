@@ -1,12 +1,43 @@
 @use "../abstracts" as var;
 
+#header {
+  box-shadow: none;
+
+  @include var.breakpoint(400px) {
+    padding-bottom: 2rem;
+  }
+}
+
 .header__container {
   width: 95%;
   margin: 0 0 0 12rem;
   display: grid;
   grid-template-columns: 157px 0.8fr 0.2fr;
   place-items: center;
+  min-height: 97px;
   gap: 8.2rem;
+  position: relative;
+
+  @include var.breakpoint(1632px) {
+    margin: 0 0 0 8rem;
+  }
+  @include var.breakpoint(1382px) {
+    margin: 0 auto;
+  }
+  @include var.breakpoint(laptop) {
+    gap: 2rem;
+  }
+
+  @include var.breakpoint(tablet) {
+    grid-template-columns: 157px 0.5fr 0.5fr;
+  }
+
+  @include var.breakpoint(mini) {
+    grid-template-columns: 157px 0.3fr 0.7fr;
+  }
+  @include var.breakpoint(400px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .logo_details {
     width: 100%;
@@ -14,12 +45,50 @@
 
   nav.menu {
     width: 100%;
-    display: grid !important;
-    grid-template-columns: 1fr 0.3fr;
-    place-items: center;
 
+    @include var.breakpoint(400px) {
+      grid-column: 1 / 3;
+      gridr-row: 2;
+    }
+
+    .responsive-header__container {
+      display: grid !important;
+      grid-template-columns: 1fr 0.3fr;
+      place-items: center;
+
+      @include var.breakpoint(laptop) {
+        position: absolute;
+        bottom: calc(-100% - 5.6rem);
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background: white;
+        z-index: 100;
+        padding: 2rem 1rem;
+      }
+
+      @include var.breakpoint(tablet) {
+        bottom: calc(-288% - 5.6rem);
+      }
+
+      @include var.breakpoint(400px) {
+        bottom: calc(-232% - 5.6rem);
+      }
+
+      @include var.breakpoint(376px) {
+        bottom: calc(-241% - 5.6rem);
+      }
+    }
     div.menu {
       width: 100%;
+
+      @include var.breakpoint(767px) {
+        display: block !important;
+      }
     }
 
     ul {
@@ -27,6 +96,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: auto 0;
+
+      @include var.breakpoint(tablet) {
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
     a {
@@ -74,12 +149,26 @@
       border-bottom: 2px solid var.$gray;
       border-radius: 0;
     }
+
+    input::placeholder {
+      color: transparent;
+    }
   }
 }
 
 #card-nav {
+  align-self: start;
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 0.6rem;
+
+  @include var.breakpoint(laptop) {
+    justify-self: end;
+  }
+
+  @include var.breakpoint(400px) {
+    grid-row: 1;
+    grid-column: 2;
+  }
 }

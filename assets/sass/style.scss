@@ -2,3 +2,7 @@
 @use "abstracts";
 @use "layouts";
 @use "components";
+
+body {
+  overflow-x: hidden;
+}

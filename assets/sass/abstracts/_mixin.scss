@@ -17,5 +17,9 @@
     @media screen and (max-width: 500px) {
       @content;
     }
+  } @else {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
   }
 }

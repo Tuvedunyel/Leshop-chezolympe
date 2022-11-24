@@ -1,0 +1,21 @@
+@use "../abstracts" as var;
+
+#burger_menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+
+  span {
+    width: 50px;
+    height: 5px;
+    background: var.$mediumOrange;
+    border-radius: 5px;
+  }
+
+  @include var.breakpoint(laptop) {
+    display: flex;
+  }
+}
