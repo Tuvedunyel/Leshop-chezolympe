@@ -1,0 +1,250 @@
+@use "../abstracts" as var;
+
+main .container {
+  width: 100% !important;
+  padding: 0;
+}
+
+main .wrapper,
+main #wrapper {
+  padding: 0 !important;
+}
+
+#right-transform {
+  background: var.$lightOrange;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: 998;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+
+  &.active {
+    transform: scaleX(1);
+    pointer-events: auto;
+    transition: 0.8s ease-in-out;
+  }
+
+  @include var.breakpoint(1055px) {
+    transform: scaleX(1);
+    transform: scaleY(0);
+    width: 100%;
+    height: 50%;
+    top: unset;
+    bottom: 0;
+    transform-origin: bottom;
+
+    &.active {
+      transform: scaleY(1);
+    }
+  }
+}
+
+#left-transform {
+  background: var.$lightOrange;
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 998;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.8s ease-in-out;
+
+  &.active {
+    transform: scaleX(1);
+    pointer-events: auto;
+    transition: 0.5s ease-in-out;
+  }
+
+  @include var.breakpoint(1055px) {
+    transform: scaleX(1);
+    transform: scaleY(0);
+    width: 100%;
+    height: 50%;
+    transform-origin: top;
+
+    &.active {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+}
+
+#absolute-logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  pointer-events: none;
+
+  @include var.breakpoint(mobile) {
+    display: none;
+  }
+
+  img {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+#App {
+  width: 100%;
+
+  .slider__bullet-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    pointer-events: none;
+    gap: 0.7rem;
+    margin-bottom: 1.6rem;
+
+    @include var.breakpoint(1055px) {
+      width: 100%;
+    }
+
+    .slider__bullet {
+      font-size: 0;
+      color: transparent;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      background: white;
+      opacity: 0.66;
+      pointer-events: all;
+      cursor: pointer;
+      transition: all 1s ease-in-out;
+      transform: scale(1);
+
+      &.active {
+        opacity: 1;
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  .slider {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    @include var.breakpoint(1055px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @include var.breakpoint(mobile) {
+      grid-template-rows: auto auto;
+    }
+  }
+}
+
+.slider__content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  margin: 0 2.5rem;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+
+  @include var.breakpoint(1055px) {
+    align-items: center;
+  }
+}
+
+.slider__left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  text-align: left;
+  background: var.$mediumOrange;
+  height: 100%;
+  width: 100%;
+
+  @include var.breakpoint(1055px) {
+    grid-row: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  @include var.breakpoint(mobile) {
+    padding: 6rem 0;
+  }
+
+  @include var.breakpoint(557px) {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    font-size: 4.6rem;
+    font-family: var.$gallery;
+    font-weight: 400;
+    color: white;
+
+    @include var.breakpoint(1055px) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: var.$gray;
+    font-family: var.$avenirLight;
+    font-weight: 300;
+    max-width: 504px;
+  }
+
+  a {
+    font-size: 2.7rem;
+    color: var.$mediumOrange;
+    background: white;
+    font-family: var.$avenirLight;
+    padding: 1.6rem 5.4rem;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+
+    @include var.breakpoint(1055px) {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      background: var.$lightOrange;
+      color: var.$gray;
+    }
+  }
+}
+
+.slider__right-side {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}

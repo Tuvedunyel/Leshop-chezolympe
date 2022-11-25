@@ -22,11 +22,17 @@
 
   .footer-container {
     width: 100%;
+    padding: 0;
 
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 3.5rem;
+
+      @include var.breakpoint(laptop) {
+        grid-template-columns: 1fr;
+        place-items: center;
+      }
     }
 
     .links {
@@ -42,6 +48,21 @@
       width: 100%;
       gap: 3.9rem;
       margin: 0;
+
+      @include var.breakpoint(laptop) {
+        justify-items: center;
+      }
+
+      @include var.breakpoint(894px) {
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 2.9rem;
+      }
+
+      .wrapper {
+        padding: 0;
+        width: 100%;
+      }
     }
 
     p {
@@ -51,6 +72,15 @@
       font-family: var.$avenirRegular;
       font-weight: 900;
       margin-bottom: 0.6rem;
+
+      @include var.breakpoint(894px) {
+        text-align: center;
+        display: block !important;
+      }
+    }
+
+    .title.clearfix.hidden-md-up {
+      display: none !important;
     }
 
     ul {
@@ -60,13 +90,48 @@
       align-items: start;
       gap: 0.5rem;
       margin-left: 1.5rem;
+      background: transparent !important;
+
+      @include var.breakpoint(894px) {
+        justify-content: center;
+        align-items: center;
+      }
 
       li,
       a {
         color: white;
         font-size: 1.8rem;
         font-family: var.$avenirRegular;
+        text-decoration: none !important;
+        border: none !important;
+        text-align: center;
       }
     }
+  }
+
+  .second-links .wrapper:last-of-type a {
+    color: transparent !important;
+    font-size: 0 !important;
+    width: 35px !important;
+    height: 35px !important;
+    display: block !important;
+    background: url("../img/instagram.svg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.mention {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  p,
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-family: var.$avenirRegular;
   }
 }
