@@ -5,4 +5,8 @@
 
 body {
   overflow-x: hidden;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }

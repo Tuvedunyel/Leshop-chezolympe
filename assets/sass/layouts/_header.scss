@@ -2,6 +2,7 @@
 
 #header {
   box-shadow: none;
+  position: relative;
 
   @include var.breakpoint(400px) {
     padding-bottom: 2rem;
@@ -16,7 +17,6 @@
   place-items: center;
   min-height: 97px;
   gap: 8.2rem;
-  position: relative;
 
   @include var.breakpoint(1632px) {
     margin: 0 0 0 8rem;
@@ -55,34 +55,31 @@
       display: grid !important;
       grid-template-columns: 1fr 0.3fr;
       place-items: center;
+      transition: 0.5s ease-in-out;
 
       @include var.breakpoint(laptop) {
+        display: flex !important;
+        transform: translateY(-100%);
         position: absolute;
-        bottom: calc(-100% - 5.6rem);
+        top: 0;
         margin: 0 auto;
-        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         gap: 2rem;
-        right: 0;
         left: 0;
-        width: 100%;
-        height: fit-content;
+        width: 100vw;
+        height: 100vh;
         background: white;
         z-index: 100;
         padding: 2rem 1rem;
-      }
 
-      @include var.breakpoint(tablet) {
-        bottom: calc(-288% - 5.6rem);
-      }
-
-      @include var.breakpoint(400px) {
-        bottom: calc(-232% - 5.6rem);
-      }
-
-      @include var.breakpoint(376px) {
-        bottom: calc(-241% - 5.6rem);
+        &.active {
+          transform: translateY(0);
+        }
       }
     }
+
     div.menu {
       width: 100%;
 
@@ -97,11 +94,26 @@
       justify-content: space-between;
       align-items: center;
       margin: auto 0;
+      position: relative;
+      z-index: 1;
 
-      @include var.breakpoint(tablet) {
+      @include var.breakpoint(laptop) {
         flex-direction: column;
         justify-content: center;
+        gap: 2rem;
       }
+    }
+
+    li.category {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    li.category:hover ~ li.category {
+      opacity: 0.3;
+    }
+
+    li.category:hover {
+      opacity: 1;
     }
 
     a {
@@ -110,6 +122,10 @@
       font-weight: 400px;
       color: var.$gray;
       transition: 0.3s ease-in-out;
+
+      @include var.breakpoint(laptop) {
+        font-size: 3.2rem;
+      }
 
       &:hover {
         color: var.$mediumOrange !important;
@@ -121,6 +137,7 @@
     position: relative;
     width: 100%;
     height: fit-content;
+    z-index: 1;
 
     &::after {
       content: "";

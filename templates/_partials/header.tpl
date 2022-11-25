@@ -9,10 +9,15 @@
       </section>
       <nav class="menu">
         <div id="burger_menu">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="responsive-header__container">
           {hook h='displayTop'}
+          <div class="background-image">
+            <div class="background-color"></div>
+          </div>
         </div>
       </nav>
       <nav id="card-nav">
