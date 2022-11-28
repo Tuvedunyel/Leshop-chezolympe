@@ -70,6 +70,21 @@
     position: relative;
   }
 
+  form.custom-add-to-cart {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    .btn-add-to-cart-custom {
+      background: transparent;
+      border: none;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+
   .flags {
     position: absolute;
     bottom: 5%;

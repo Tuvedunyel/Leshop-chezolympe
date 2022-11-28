@@ -108,7 +108,7 @@
       transition: opacity 0.3s ease-in-out;
     }
 
-    li.category:hover ~ li.category {
+    ul:hover > li.category:not(:hover) {
       opacity: 0.3;
     }
 

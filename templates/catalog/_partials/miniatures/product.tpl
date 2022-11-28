@@ -23,6 +23,16 @@
 							{/if}
 						{/block}
 						{include file='catalog/_partials/product-flags.tpl'}
+						<form action="{$urls.pages.cart}" method="post" class="custom-add-to-cart">
+							<input type="hidden" name="token" value="{$static_token}">
+							<input type="hidden" name="id_product" value="{$product.id}" class="product_page_product_id">
+							<input type="hidden" name="qty" value="1">
+							<button class="btn-add-to-cart-custom" data-button-action="add-to-cart" type="submit"
+								{if $product.quantity < 1 }disabled{/if}>
+								<img src="{$urls.img_url}add-to-cart.svg" alt="Ajouter au panier">
+								<span class="screen-reader-text">Ajouter "{$product.name}" au panier</span>
+							</button>
+						</form>
 					</div>
 
 					<div class="product-description">

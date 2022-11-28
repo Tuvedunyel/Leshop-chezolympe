@@ -1,5 +1,9 @@
 @use "../abstracts" as var;
 
+section#main {
+  background: white;
+}
+
 #product-categories__front .large-container {
   gap: 1.7rem;
 }
@@ -85,6 +89,13 @@ article.product-categories {
     border: 1px solid var.$mediumOrange;
     border-radius: 1rem;
     text-align: start;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background: var.$mediumOrange;
+      color: white;
+    }
+
     @include var.breakpoint(laptop) {
       text-align: center;
     }
@@ -141,4 +152,92 @@ article.product-categories {
       transform: rotate(0);
     }
   }
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 6.6rem;
+
+    h2 {
+      font-size: 4rem;
+      font-family: var.$gallery;
+      font-weight: 400;
+      text-align: center;
+      text-transform: initial;
+      color: var.$gray;
+    }
+
+    p {
+      color: var.$gray;
+      font-size: 1.8rem;
+      font-family: var.$avenirLight;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}
+
+.benefits {
+  margin-top: 4.2rem;
+
+  .large-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7.7rem;
+    place-items: center;
+    max-width: 1160px;
+    background: var.$lightOrange;
+    padding: 3.1rem 10.5rem 1.5rem 10.5rem;
+
+    border-top-left-radius: 8.3rem;
+    border-top-right-radius: 8.3rem;
+
+    @include var.breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include var.breakpoint(mini) {
+      grid-template-columns: 1fr;
+      gap: 2.7rem;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 74px);
+      align-items: center;
+      justify-items: center;
+      gap: 0.7rem;
+
+      p {
+        text-align: center;
+        color: var.$gray;
+        font-size: 1.8rem;
+        font-family: var.$avenirLight;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+footer.page-footer {
+  display: none;
 }
