@@ -1,4 +1,4 @@
-const url = "https://chezolympe.test/wp-json/";
+const url = "btg-dev.com/chez-olympe/wp-json/";
 const burgerMenu = document.getElementById("burger_menu");
 const navMenu = document.querySelector(".responsive-header__container");
 const windowWidth = window.innerWidth;
