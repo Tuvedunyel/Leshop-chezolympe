@@ -10,13 +10,13 @@
 	<div class="container">
 		<div class="first-links">
 			{block name='hook_footer'}
-																{hook h='displayFooter'}
-															{/block}
+																			{hook h='displayFooter'}
+																		{/block}
 		</div>
 		<div class="second-links">
 			{block name='hook_footer_after'}
-																{hook h='displayFooterAfter'}
-															{/block}
+																			{hook h='displayFooterAfter'}
+																		{/block}
 		</div>
 	</div>
 </section>

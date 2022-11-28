@@ -142,8 +142,12 @@
   position: absolute;
   width: 95px;
   height: 191px;
-  right: 0;
-  bottom: 0;
+  right: 23%;
+  bottom: -100%;
+
+  @include var.breakpoint(tablet) {
+    display: none;
+  }
 
   img {
     width: 100%;

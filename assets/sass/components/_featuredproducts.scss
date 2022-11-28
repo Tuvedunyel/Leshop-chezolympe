@@ -1,0 +1,139 @@
+@use "../abstracts" as var;
+
+.top-commu {
+  background: var.$lightOrange;
+  width: 100%;
+  padding-block: 5.2rem 8rem;
+  margin-top: 0.4rem;
+
+  .large-container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-family: var.$gallery;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .subtitle {
+    margin-top: 1.4rem;
+    font-size: 1.8rem;
+    font-family: var.$avenirLight;
+    text-align: center;
+    max-width: 780px;
+    margin-inline: auto;
+    color: var.$gray;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.2rem;
+    justify-items: center;
+    align-items: start;
+    margin-top: 2rem;
+
+    @include var.breakpoint(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include var.breakpoint(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .thumbnail-container {
+    background: transparent !important;
+
+    &:hover .product-description::after {
+      box-shadow: none !important;
+      border: none !important;
+      border-top: none !important;
+      content: unset !important;
+      width: 0 !important;
+      opacity: 0 !important;
+      display: none !important;
+    }
+  }
+
+  .thumbnail-top {
+    background: white;
+    padding: 2rem;
+    border-radius: 38px;
+    position: relative;
+  }
+
+  .flags {
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+
+    li {
+      font-size: 1.7rem;
+      font-family: var.$gallery;
+      font-weight: 400;
+
+      &.new {
+        color: var.$darkOrange;
+      }
+    }
+  }
+
+  .border-product {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 38px;
+  }
+
+  .product-description {
+    background: transparent;
+    padding: 1.8rem;
+
+    h3,
+    h3 a {
+      font-size: 1.9rem !important;
+      font-family: var.$avenirRegular;
+      font-weight: 500;
+      color: var.$gray;
+      text-align: left;
+      max-width: 259px;
+    }
+  }
+
+  .wishlist-button-add {
+    right: unset !important;
+    top: 5% !important;
+    left: 5% !important;
+    box-shadow: none !important;
+    padding: 1rem;
+    font-weight: 400;
+
+    i {
+      font-weight: 400;
+    }
+  }
+
+  .regular-price {
+    font-size: 2rem;
+    font-family: var.$avenirRegular;
+    font-weight: 900;
+    color: var.$darkOrange;
+    text-decoration: line-through;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 3.2rem;
+    color: var.$gray;
+    font-family: var.$avenirRegular;
+    font-weight: 900;
+    text-align: center;
+  }
+}
