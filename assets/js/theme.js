@@ -1,9 +1,13 @@
+const url = "https://chezolympe.test/wp-json/";
 const burgerMenu = document.getElementById("burger_menu");
 const navMenu = document.querySelector(".responsive-header__container");
 const windowWidth = window.innerWidth;
 const App = document.getElementById("App");
 const rightTransform = document.getElementById("right-transform");
 const leftTransform = document.getElementById("left-transform");
+const productCategoiresFront = document.querySelector(
+  "#product-categories__front > .large-container"
+);
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
@@ -13,9 +17,76 @@ if (windowWidth <= 1250 && burgerMenu) {
   });
 }
 
-if (App) {
+if (App && productCategoiresFront) {
   let data = [];
   let sliderArray = [];
+  let categories = [];
+
+  class productCategories {
+    constructor(image, title, text, btn) {
+      this.image = image;
+      this.title = title;
+      this.text = text;
+      this.btn = btn;
+    }
+
+    createLeftSide() {
+      const leftSide = document.createElement("div");
+      leftSide.classList.add("product-categories__left-side");
+      leftSide.appendChild(this.createImage());
+      return leftSide;
+    }
+
+    createRightSide() {
+      const rightSide = document.createElement("div");
+      const leafContainer = document.createElement("div");
+      leafContainer.classList.add("product-categories__leaf-container");
+      rightSide.classList.add("product-categories__right-side");
+      rightSide.appendChild(leafContainer);
+      rightSide.appendChild(this.createTitle());
+      rightSide.appendChild(this.createText());
+      rightSide.appendChild(this.createBtn());
+      return rightSide;
+    }
+
+    createImage() {
+      const image = document.createElement("img");
+      image.classList.add("product-categories__img");
+      image.src = this.image.url;
+      image.alt = this.image.alt;
+      return image;
+    }
+
+    createTitle() {
+      const title = document.createElement("h2");
+      title.classList.add("product-categories__title");
+      title.textContent = this.title;
+      return title;
+    }
+
+    createText() {
+      const text = document.createElement("p");
+      text.classList.add("product-categories__text");
+      text.textContent = this.text;
+      return text;
+    }
+
+    createBtn() {
+      const btn = document.createElement("a");
+      btn.classList.add("product-categories__btn");
+      btn.setAttribute("href", this.btn.url);
+      btn.textContent = this.btn.title;
+      return btn;
+    }
+
+    createProductCategories() {
+      const productCategories = document.createElement("article");
+      productCategories.classList.add("product-categories");
+      productCategories.appendChild(this.createLeftSide());
+      productCategories.appendChild(this.createRightSide());
+      return productCategories;
+    }
+  }
 
   class Slider {
     constructor(title, text, btn, img) {
@@ -84,12 +155,11 @@ if (App) {
   }
 
   const getData = async () => {
-    await fetch(
-      "https://chezolympe.test/wp-json/better-rest-endpoints/v1/options/acf"
-    )
+    await fetch(`${url}better-rest-endpoints/v1/options/acf`)
       .then((response) => response.json())
       .then((res) => {
         data = res.slider;
+        categories = res.categories_shop;
       });
 
     data.forEach((item) => {
@@ -101,6 +171,16 @@ if (App) {
       ).createSlider();
       sliderArray.push(slider);
     });
+
+    categories.forEach((category) => {
+      const productCategory = new productCategories(
+        category.image,
+        category.titre,
+        category.texte,
+        category.lien
+      ).createProductCategories();
+      productCategoiresFront.appendChild(productCategory);
+    });
   };
 
   const handleData = async () => {
@@ -110,7 +190,6 @@ if (App) {
     let b = 1;
     let slide = sliderArray.slice(a, b);
     let bulletPoint = [];
-    console.log(size);
 
     for (let i = 0; i < size; i++) {
       bulletPoint.push(i);
@@ -162,7 +241,6 @@ if (App) {
   };
 
   const slideImage = (bulletPoint, a, b, size, slide) => {
-    console.log(bulletPoint.length);
     slide = sliderArray.slice(a, b);
     App.innerHTML = "";
     slide.forEach((item) => {
