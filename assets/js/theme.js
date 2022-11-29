@@ -1,4 +1,4 @@
-const url = "btg-dev.com/chez-olympe/wp-json/";
+const url = "https://chezolympe.test/wp-json/";
 const burgerMenu = document.getElementById("burger_menu");
 const navMenu = document.querySelector(".responsive-header__container");
 const windowWidth = window.innerWidth;
@@ -8,6 +8,9 @@ const leftTransform = document.getElementById("left-transform");
 const productCategoiresFront = document.querySelector(
   "#product-categories__front > .large-container"
 );
+const seeAll = document.getElementById("see-all");
+const btnSelect = document.querySelectorAll(".btn-select");
+const selectToChange = document.querySelector(".select-to-change");
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
@@ -250,4 +253,41 @@ if (App && productCategoiresFront) {
   };
 
   handleData();
+}
+
+if (seeAll) {
+  const paragraph = document.querySelectorAll(".product-description > p");
+
+  seeAll.addEventListener("click", () => {
+    paragraph.forEach((item) => {
+      if (item !== seeAll) {
+        item.classList.toggle("active");
+      }
+
+      if (item.classList.contains("active")) {
+        seeAll.textContent = "Voir moins";
+      } else {
+        seeAll.textContent = "En savoir plus";
+      }
+    });
+  });
+}
+
+if (selectToChange) {
+  btnSelect[0].classList.add("active");
+  const checkId = () => {
+    btnSelect.forEach((btn) => {
+      if (btn.id !== selectToChange.value) {
+        btn.classList.remove("active");
+      }
+    });
+  };
+  btnSelect.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log(btn.id);
+      selectToChange.value = btn.id;
+      btn.classList.add("active");
+      checkId();
+    });
+  });
 }
