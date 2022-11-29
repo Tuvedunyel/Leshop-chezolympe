@@ -11,6 +11,13 @@ const productCategoiresFront = document.querySelector(
 const seeAll = document.getElementById("see-all");
 const btnSelect = document.querySelectorAll(".btn-select");
 const selectToChange = document.querySelector(".select-to-change");
+const colorInput = document.querySelectorAll(
+  ".color-controller > li > label > input"
+);
+const colorReturn = document.querySelector(".color-return");
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const quantity = document.getElementById("quantity_wanted");
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
@@ -289,5 +296,33 @@ if (selectToChange) {
       btn.classList.add("active");
       checkId();
     });
+  });
+}
+
+if (colorInput && colorReturn) {
+  for (input of colorInput) {
+    input.addEventListener("click", (e) => {
+      colorReturn.textContent = e.target.title;
+    });
+  }
+}
+
+if (plus && minus && quantity) {
+  const handleQuantity = (operator) => {
+    if (operator === "plus") {
+      quantity.value = Number(quantity.value) + 1;
+    } else if (operator === "minus") {
+      if (quantity.value > 1) {
+        quantity.value = Number(quantity.value) - 1;
+      }
+    }
+  };
+
+  plus.addEventListener("click", () => {
+    handleQuantity("plus");
+  });
+
+  minus.addEventListener("click", () => {
+    handleQuantity("minus");
   });
 }
