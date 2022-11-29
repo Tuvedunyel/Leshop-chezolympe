@@ -285,8 +285,35 @@
       }
     }
   }
+  .additional-info-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6.2rem;
 
-  .social-sharing {
-    display: none !important;
+    li {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 31px 35px;
+      justify-items: center;
+      align-items: start;
+      gap: 0.6rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-family: var.$avenirLight;
+        color: var.$gray;
+        text-align: center;
+        max-width: 115px;
+        width: 100%;
+      }
+    }
   }
 }
