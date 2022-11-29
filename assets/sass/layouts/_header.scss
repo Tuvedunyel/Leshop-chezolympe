@@ -189,3 +189,22 @@
     grid-column: 2;
   }
 }
+
+.popover {
+  min-width: unset !important;
+  width: fit-content !important;
+  transform: translateY(30%);
+  background: transparent !important;
+  box-shadow: unset !important;
+
+  ul {
+    background: white;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: start !important;
+    border: 1px solid var.$mediumOrange;
+    border-radius: 9px;
+    padding: 1.7rem 1.9rem;
+    gap: 1.3rem;
+  }
+}

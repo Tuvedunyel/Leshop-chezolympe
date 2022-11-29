@@ -228,6 +228,11 @@
       gap: 1.4rem;
     }
 
+    .bootstrap-touchspin-down,
+    .bootstrap-touchspin-up {
+      display: none !important;
+    }
+
     #quantity_wanted {
       display: flex;
       justify-content: center;
@@ -313,6 +318,249 @@
         text-align: center;
         max-width: 115px;
         width: 100%;
+      }
+    }
+  }
+}
+
+.utilisation {
+  background: var.$lightOrange;
+  padding-block: 2.3rem 5.3rem;
+
+  .container-large {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 4rem;
+    color: black;
+    font-weight: 400;
+    font-family: var.$gallery;
+    text-transform: initial;
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+
+  .utilisation-content {
+    width: 100%;
+
+    table,
+    tr,
+    tbody {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+      gap: 1.2rem;
+    }
+
+    img {
+      width: 216px;
+      height: 216px;
+      border-radius: 50%;
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
+      color: var.$gray;
+      text-align: center;
+    }
+  }
+}
+
+.bottom-product {
+  width: 100%;
+  margin-top: 2.9rem;
+
+  .container-small {
+    max-width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .before-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.9rem;
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    color: black;
+    font-weight: 400;
+    font-family: var.$gallery;
+    text-transform: initial;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 633px;
+  }
+}
+
+.product-description-bottom {
+  display: grid;
+  grid-template-columns: 355px 418px;
+  gap: 4.4rem;
+  justify-items: center;
+  align-items: start;
+
+  .left {
+    border-radius: 38px;
+    height: 95%;
+    padding-bottom: 5rem;
+
+    img {
+      border-radius: 38px;
+    }
+  }
+
+  .right {
+    align-self: end;
+    padding-top: 2rem;
+
+    p,
+    strong {
+      font-size: 1.8rem;
+      text-align: left;
+      color: var.$gray;
+    }
+
+    strong {
+      font-family: var.$avenirRegular;
+      font-weight: 900;
+      margin-bottom: 4rem;
+      display: flow-root;
+    }
+
+    p {
+      font-family: var.$avenirLight;
+      font-weight: 300;
+    }
+  }
+}
+
+.entretien {
+  margin-top: 3.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var.$mediumOrange;
+  border-bottom: 1px solid var.$mediumOrange;
+
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: var.$avenirRegular;
+    color: var.$mediumOrange;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+
+    span {
+      border: 1px solid var.$mediumOrange;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+#entretien-content {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  p {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.8rem;
+    font-family: var.$avenirLight;
+    font-weight: 300;
+    color: var.$gray;
+  }
+
+  strong,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.8rem;
+    font-family: var.$avenirRegular;
+    font-weight: 900;
+    color: var.$gray;
+  }
+}
+
+.comment-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  .row {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  #product-comments-list-header {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+
+    .comments-nb {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 900;
+      font-family: var.$avenirRegular;
+      color: var.$mediumOrange;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+
+      .material-icons {
+        display: none !important;
       }
     }
   }

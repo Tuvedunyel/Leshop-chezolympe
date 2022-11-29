@@ -18,6 +18,8 @@ const colorReturn = document.querySelector(".color-return");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
 const quantity = document.getElementById("quantity_wanted");
+const entretienHandler = document.getElementById("entretien-handler");
+const entretienContent = document.getElementById("entretien-content");
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
@@ -324,5 +326,11 @@ if (plus && minus && quantity) {
 
   minus.addEventListener("click", () => {
     handleQuantity("minus");
+  });
+}
+
+if (entretienHandler && entretienContent) {
+  entretienHandler.addEventListener("click", () => {
+    entretienContent.classList.toggle("active");
   });
 }

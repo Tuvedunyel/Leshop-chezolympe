@@ -184,102 +184,193 @@
                 {/block}
             </div>
         </div>
-        </div>
+        {* </div> *}
 
-        <section class="bottom-product">
-            <div class="container-small">
-                {block name='product_description'}
-                    <div class="product-description">{$product.description nofilter}</div>
-                {/block}
-
-                {block name='product_footer'}
-                    {hook h='displayFooterProduct' product=$product category=$category}
-                {/block}
+        <section class="utilisation">
+            <div class="container-large">
+                <h2>Comment l'utiliser</h2>
+            <div class="utilisation-content">
+                {widget name='advancedcustomfields' hook='utilisation'}
             </div>
-        </section>
-
-        {block name='product_accessories'}
-            {* {if $accessories}
-                                                                                                                <section class="product-accessories clearfix">
-                                                                                                                    <p class="h5 text-uppercase">
-
-
-
-
-
-
-
-                {l s='You might also like' d='Shop.Theme.Catalog'}</p>
-                                                                                                                    <div class="products row">
-
-
-
-
-
-
-
-
-                {foreach from=$accessories item="product_accessory" key="position"}
-
-
-
-
-
-
-
-
-                    {block name='product_miniature'}
-
-
-
-
-
-
-
-
-                        {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-6 col-lg-4 col-xl-3"}
-
-
-
-
-
-
-
-
-                    {/block}
-
-
-
-
-
-
-
-
-                {/foreach}
-                                                                                                                    </div>
-                                                                                                                </section>
-
-
-
-
-
-
-
-
-            {/if} *}
-        {/block}
-
-        {block name='product_images_modal'}
-            {* {include file='catalog/_partials/product-images-modal.tpl'} *}
-        {/block}
-
-        {block name='page_footer_container'}
-            <footer class="page-footer">
-                {block name='page_footer'}
-                    <!-- Footer content -->
-                {/block}
-            </footer>
-        {/block}
+        </div>
     </section>
+
+    <section class="bottom-product">
+        <div class="container-small">
+            {block name='product_description'}
+            <div class="before-description">
+                <h2>{widget name='advancedcustomfields' hook='waymore'}</h2>
+                {widget name='advancedcustomfields' hook='imagewaymore'}
+            </div>
+            <div class="product-description-bottom">
+                <div class="left">
+                    {widget name='advancedcustomfields' hook='imagedescription'}
+                </div>
+                <div class="right">
+                    {$product.description nofilter}
+                </div>
+            </div>
+            {/block}
+
+            <div class="entretien">
+                <h3 id="entretien-handler">Entretien <span>+</span></h3>
+                <div id="entretien-content">
+                    {widget name='advancedcustomfields' hook='entretien'}
+                </div>
+            </div>
+            {block name='product_footer'}
+            <div class="comment-container">
+                {hook h='displayFooterProduct' product=$product category=$category}
+            </div>
+            {/block}
+        </div>
+    </section>
+
+    {block name='product_accessories'}
+    {* {if $accessories}
+                                                                                                                                                                                                                                <section class="product-accessories clearfix">
+                                                                                                                                                                                                                                    <p class="h5 text-uppercase">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {l s='You might also like' d='Shop.Theme.Catalog'}</p>
+                                                                                                                                                                                                                                    <div class="products row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {foreach from=$accessories item="product_accessory" key="position"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        {block name='product_miniature'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory position=$position productClasses="col-xs-6 col-lg-4 col-xl-3"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        {/block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {/foreach}
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {/if} *}
+    {/block}
+
+    {block name='product_images_modal'}
+    {include file='catalog/_partials/product-images-modal.tpl'}
+    {/block}
+
+    {block name='page_footer_container'}
+    <footer class="page-footer">
+        {block name='page_footer'}
+            <!-- Footer content -->
+        {/block}
+    </footer>
+    {/block}
+</section>
 
 {/block}
