@@ -1,0 +1,46 @@
+@use "../abstracts" as var;
+
+#custom__breadcrumb {
+  max-width: 90%;
+  margin: 3rem auto 0 auto;
+
+  li::after {
+    content: "" !important;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var.$mediumOrange;
+    border-radius: 50%;
+  }
+
+  li:last-child::after {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+
+  a {
+    color: var.$gray;
+    opacity: 0.5;
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: var.$avenirLight;
+    transition: 0.3s ease-in-out;
+    height: fit-content;
+    display: inline-block;
+    text-decoration: none !important;
+
+    &:hover {
+      opacity: 1;
+      color: var.$mediumOrange !important;
+    }
+  }
+
+  span {
+    color: var.$gray;
+    opacity: 1;
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: var.$avenirLight;
+  }
+}
