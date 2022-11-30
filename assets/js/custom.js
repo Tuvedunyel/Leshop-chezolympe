@@ -293,7 +293,6 @@ if (selectToChange) {
   };
   btnSelect.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log(btn.id);
       selectToChange.value = btn.id;
       btn.classList.add("active");
       checkId();

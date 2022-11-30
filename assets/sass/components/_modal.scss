@@ -1,0 +1,225 @@
+@use "../abstracts" as var;
+
+.modal-content {
+  background: white;
+  border: 13px solid var.$mediumOrange;
+
+  .modal-header {
+    border: none;
+  }
+
+  .modal-body {
+    padding: 0 !important;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .product-part__container {
+    display: grid;
+    grid-template-columns: 199px 1fr;
+    gap: 2.2rem;
+
+    @include var.breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .thumbnail__container {
+    width: 100%;
+
+    @include var.breakpoint(mobile) {
+      max-width: 199px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 38px;
+      border: 1px solid var.$lightOrange;
+      max-width: 100% !important;
+      margin: auto !important;
+    }
+  }
+
+  .content__container {
+    margin-top: 1.5rem;
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      font-family: var.$avenirRegular;
+      text-align: left;
+      margin-bottom: 1rem;
+      color: var.$gray;
+
+      @include var.breakpoint(mobile) {
+        text-align: center;
+      }
+    }
+
+    .product-quantity,
+    .product-quantity strong {
+      font-size: 1.8rem;
+      font-weight: 900;
+      font-family: var.$avenirRegular;
+      text-align: left;
+      color: var.$gray;
+
+      @include var.breakpoint(mobile) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    h6.h6.product-name {
+      font-size: 3.6rem !important;
+      font-weight: 400 !important;
+      font-family: var.$gallery !important;
+      text-align: left !important;
+      color: black !important;
+      margin-block: 0.6rem !important;
+      padding: 0 !important;
+
+      @include var.breakpoint(mobile) {
+        text-align: center !important;
+      }
+    }
+
+    .product-price__container {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 2.6rem;
+
+      @include var.breakpoint(mobile) {
+        justify-content: center;
+      }
+    }
+
+    .regular-price {
+      font-size: 2rem;
+      color: var.$mediumOrange;
+      font-weight: 900;
+      font-family: var.$avenirRegular;
+      text-decoration: line-through;
+    }
+
+    .current-product-price strong {
+      font-size: 3.2rem;
+      color: var.$gray;
+      font-weight: 900;
+      font-family: var.$avenirRegular;
+    }
+  }
+}
+
+.more-infos-modal {
+  margin-top: 2.8rem;
+  margin-bottom: 3.3rem;
+  .cart-content {
+    padding: 0 !important;
+  }
+
+  .cart-products-count {
+    font-weight: 900 !important;
+    font-family: var.$avenirRegular !important;
+    font-size: 1.8rem !important;
+    text-align: left !important;
+    margin-bottom: 1.6rem !important;
+    padding: 0 !important;
+    color: var.$gray !important;
+
+    @include var.breakpoint(mobile) {
+      justify-content: center !important;
+      text-align: center !important;
+    }
+  }
+
+  p:not([class]),
+  p:not([class]) span {
+    font-size: 1.8rem;
+    font-family: var.$avenirLight;
+    text-align: left;
+    font-weight: 300 !important;
+    padding: 0 !important;
+    color: var.$gray !important;
+    justify-content: start !important;
+
+    @include var.breakpoint(mobile) {
+      justify-content: center !important;
+    }
+  }
+
+  .product-total {
+    margin-top: 0.6rem;
+  }
+
+  .product-total,
+  .product-total :is(span, span.label) {
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: 1.8rem !important;
+    color: var.$gray !important;
+    font-weight: 900 !important;
+    font-family: var.$avenirRegular !important;
+    text-align: left;
+    justify-content: start !important;
+
+    @include var.breakpoint(mobile) {
+      justify-content: center !important;
+    }
+  }
+
+  .cart-content-btn {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    align-items: center;
+    padding: 0;
+    margin-top: 2.3rem;
+
+    @include var.breakpoint(mobile) {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    button#modal-btn {
+      background: white;
+      border: 1px solid var.$mediumOrange;
+      color: var.$mediumOrange;
+      font-size: 2.7rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
+      padding: 1.7rem 4rem 0.2rem 4rem;
+      transition: 0.3s ease-in-out;
+      border-radius: 10px;
+
+      &:hover {
+        background: var.$mediumOrange;
+        color: white;
+      }
+    }
+
+    a#modal-link {
+      font-size: 2.7rem;
+      font-family: var.$avenirLight;
+      font-weight: 300;
+      color: white;
+      background: var.$mediumOrange;
+      border: 1px solid var.$mediumOrange;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      padding: 1.7rem 4rem 0.2rem 4rem;
+
+      &:hover {
+        color: var.$mediumOrange;
+        background: white;
+      }
+    }
+  }
+}

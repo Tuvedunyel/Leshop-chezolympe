@@ -661,6 +661,10 @@
   justify-content: center;
   align-items: start;
 
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var.$mediumOrange;
+  }
+
   .comment-buttons {
     display: none !important;
   }
@@ -797,4 +801,10 @@
     color: var.$gray;
     margin-bottom: 0.6rem;
   }
+}
+
+.benefits.product-benefits .large-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }

@@ -106,6 +106,7 @@
 
     li.category {
       transition: opacity 0.3s ease-in-out;
+      position: relative;
     }
 
     ul:hover > li.category:not(:hover) {
@@ -193,9 +194,10 @@
 .popover {
   min-width: unset !important;
   width: fit-content !important;
-  transform: translateY(30%);
   background: transparent !important;
   box-shadow: unset !important;
+  top: unset !important;
+  left: 0 !important;
 
   ul {
     background: white;
