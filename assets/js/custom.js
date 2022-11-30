@@ -330,7 +330,15 @@ if (plus && minus && quantity) {
 }
 
 if (entretienHandler && entretienContent) {
+  let isActive = false;
   entretienHandler.addEventListener("click", () => {
     entretienContent.classList.toggle("active");
+    isActive = !isActive;
+
+    if (isActive) {
+      entretienHandler.innerHTML = "Entretien <span>-</span>";
+    } else {
+      entretienHandler.innerHTML = "Entretien <span>+</span>";
+    }
   });
 }
