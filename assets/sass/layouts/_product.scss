@@ -534,6 +534,10 @@
   justify-content: center;
   align-items: start;
 
+  .comments-note {
+    display: none;
+  }
+
   .row {
     width: 100%;
     margin: 0 !important;
@@ -563,5 +567,133 @@
         display: none !important;
       }
     }
+  }
+}
+
+#product-comments-list {
+  padding: 0;
+}
+
+.product-comment-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  .comment-buttons {
+    display: none !important;
+  }
+
+  .comment-infos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: start;
+    align-items: center;
+    padding: 0;
+    min-height: 20px;
+    margin-bottom: 1.5rem;
+
+    .comment-author {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 1.8rem;
+      color: var.$gray;
+      font-family: var.$avenirRegular;
+      font-weight: 900;
+      justify-self: start;
+    }
+
+    .grade-stars {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      justify-self: start;
+
+      .star {
+        background: url(../img/notes.png) no-repeat 0 0 transparent;
+        background-position: -24px 0;
+      }
+
+      .star-on {
+        background: url(../img/notes.png) no-repeat 0 0 transparent;
+      }
+    }
+
+    .comment-date {
+      grid-column: 3;
+      grid-row: 1;
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
+      justify-self: end;
+    }
+  }
+}
+
+#product-comments-list-footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .btn {
+    color: white;
+    background: var.$mediumOrange;
+    border-radius: 10px;
+    font-size: 2.7rem;
+    font-family: var.$avenirLight;
+    border: 1px solid var.$mediumOrange;
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+    padding: 1.7rem 4.3rem 0.3rem 4.3rem;
+    min-height: fit-content;
+    height: fit-content;
+
+    &:hover {
+      background: transparent;
+      color: var.$mediumOrange;
+    }
+  }
+
+  .material-icons {
+    display: none;
+  }
+}
+
+.comment-content {
+  padding: 0;
+
+  p {
+    font-size: 1.8rem;
+    font-family: var.$avenirLight;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    font-family: var.$avenirRegular;
+    font-weight: 900;
+    color: var.$gray;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.comment-notation-top {
+  #product-comments-list-header {
+    padding: 0;
+  }
+
+  #product-comments-list {
+    display: none;
+  }
+
+  .comments-nb {
+    display: none;
+  }
+
+  .comments-note span {
+    display: none;
+  }
+
+  #product-comments-list-footer {
+    display: none;
   }
 }

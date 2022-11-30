@@ -45,6 +45,9 @@
                 {block name='page_header_container'}
                     {block name='page_header'}
                         <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
+                        <div class="comment-notation-top">
+                            {* {hook h='displayFooterProduct' product=$product category=$category} *}
+                        </div>
                     {/block}
                 {/block}
                 {block name='product_prices'}
@@ -367,7 +370,6 @@
     {block name='page_footer_container'}
     <footer class="page-footer">
         {block name='page_footer'}
-            <!-- Footer content -->
         {/block}
     </footer>
     {/block}
