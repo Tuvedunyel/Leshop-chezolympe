@@ -1,0 +1,196 @@
+@use "../abstracts" as var;
+
+#main #content {
+  margin-bottom: 0;
+}
+
+h1 .title_auth {
+  font-size: 4.6rem;
+  font-weight: 400;
+  font-family: var.$gallery;
+  color: black;
+  display: flex;
+  width: 85%;
+  margin: 4rem auto 3.3rem auto;
+
+  @include var.breakpoint(mini) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#content {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.custom-auth {
+  width: min(718px, 90%);
+  margin: 0 auto;
+
+  .help-block li {
+    font-size: 1.8rem;
+    font-family: var.$avenirRegular;
+    color: var.$gray;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.connect-input__container {
+  background: var.$mediumOrange;
+  border-radius: 9px;
+  width: 100%;
+  padding: 3.5rem 5.2rem;
+
+  @include var.breakpoint(mini) {
+    padding: 3.5rem 3.2rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 116px 340px 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    column-gap: 2.7rem;
+    margin: 0 0 1rem 0;
+
+    @include var.breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .col-md-6 {
+      width: 100%;
+      float: unset;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  label {
+    padding: 0;
+    margin: 0;
+    float: unset;
+    width: 116px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: var.$avenirRegular;
+    color: white;
+    text-align: left;
+
+    @include var.breakpoint(mobile) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: 10px !important;
+    background: white;
+    color: var.$gray;
+    height: 55px;
+    font-size: 1.8rem;
+    font-family: var.$avenirRegular;
+
+    @include var.breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+
+  .input-group-btn {
+    display: none !important;
+  }
+}
+
+.custom-forgot-password {
+  margin-top: 3rem !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    font-family: var.$avenirRegular;
+    font-weight: 900;
+  }
+}
+
+.custom-login-footer {
+  margin-top: 1.8rem;
+
+  #submit-login {
+    background: var.$mediumOrange;
+    color: white;
+    font-size: 2.7rem;
+    font-weight: 300;
+    font-family: var.$avenirLight;
+    border-radius: 10px;
+    border: 1px solid var.$mediumOrange;
+    padding: 1.7rem 4.3rem 0.3rem 4.3rem !important;
+    transition: 0.3s ease-in-out;
+    text-transform: initial;
+
+    &:hover {
+      background: transparent;
+      color: var.$mediumOrange;
+    }
+  }
+}
+
+hr {
+  display: none !important;
+}
+
+#custom__no-account {
+  text-align: left;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 85%;
+  margin-inline: auto;
+  margin-bottom: 3.3rem;
+
+  @include var.breakpoint(mini) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: var.$avenirRegular;
+    color: var.$gray;
+
+    @include var.breakpoint(mini) {
+      text-align: center;
+    }
+  }
+
+  a {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: var.$avenirRegular;
+    color: var.$mediumOrange;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+
+    @include var.breakpoint(mini) {
+      text-align: center;
+    }
+
+    &:hover {
+      color: var.$darkOrange;
+    }
+  }
+}
