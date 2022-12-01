@@ -9,6 +9,14 @@
 
         {block name='product_list_header'}
             {* <h1 id="js-product-list-header title__custom-product-list" class="h2">{$category.name}</h1> *}
+            <div class="custom-product-list__header">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Justo laoreet sit amet cursus sit amet dictum sit amet. Pellentesque habitant morbi
+                    tristique senectus et netus. Ornare arcu dui vivamus arcu. Ullamcorper sit amet risus nullam eget felis eget
+                    nunc lobortis. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices.
+                </p>
+            </div>
         {/block}
 
         {block name='subcategory_list'}
@@ -24,7 +32,7 @@
 
                 {block name='product_list_top'}
                     {* Sort by *}
-                    {* {include file='catalog/_partials/products-top.tpl' listing=$listing} *}
+                    {include file='catalog/_partials/products-top.tpl' listing=$listing}
                 {/block}
 
                 {block name='product_list_active_filters'}
@@ -34,7 +42,9 @@
                 {/block}
 
                 {block name='product_list'}
-                    {include file='catalog/_partials/products.tpl' listing=$listing productClass="col-xs-6 col-xl-4"}
+                    <div class="top-commu">
+                        {include file='catalog/_partials/products.tpl' listing=$listing productClass="col-xs-6 col-xl-4"}
+                    </div>
                 {/block}
 
                 {block name='product_list_bottom'}
@@ -58,6 +68,7 @@
         </section>
 
         {hook h="displayFooterCategory"}
+
 
     </section>
 {/block}
