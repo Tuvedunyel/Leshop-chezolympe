@@ -9,7 +9,7 @@
  {block name='page_content'}
      <div class="no-account" id="custom__no-account">
          <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'}&nbsp;</p>
-         <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a>
+         <a href="{$urls.pages.authentication}">Cliquez ici</a>
      </div>
      {block name='register_form_container'}
          {$hook_create_account_top nofilter}
