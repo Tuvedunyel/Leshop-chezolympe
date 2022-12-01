@@ -66,6 +66,15 @@ h1 .title_auth {
       grid-template-columns: 1fr;
     }
 
+    .form-control-comment {
+      font-size: 1.4rem;
+      color: white;
+      margin-top: 0.7rem;
+      font-family: var.$avenirRegular;
+      width: 100% !important;
+      padding: 0 !important;
+    }
+
     .col-md-6 {
       width: 100%;
       float: unset;
@@ -129,7 +138,8 @@ h1 .title_auth {
 .custom-login-footer {
   margin-top: 1.8rem;
 
-  #submit-login {
+  #submit-login,
+  #custom__create-account {
     background: var.$mediumOrange;
     color: white;
     font-size: 2.7rem;
@@ -191,6 +201,88 @@ hr {
 
     &:hover {
       color: var.$darkOrange;
+    }
+  }
+}
+
+#registration__custom {
+  .col-md-6.form-control-valign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include var.breakpoint(mini) {
+      flex-direction: column;
+    }
+
+    .radio-inline {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
+      width: auto;
+
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .form-group {
+    grid-template-columns: 116px 390px 1fr;
+
+    @include var.breakpoint(760px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .custom-radio {
+    span {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: var.$mediumOrange;
+    }
+  }
+
+  .form-group:nth-of-type(7),
+  .form-group:nth-of-type(8),
+  .form-group:nth-of-type(9) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .col-md-6 {
+      max-width: 100%;
+      min-width: 100%;
+
+      label {
+        padding: 0;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+
+        span {
+          border: 1px solid var.$gray;
+          width: 15px;
+          height: 15px;
+          color: var.$gray;
+          background: white;
+
+          i {
+            font-size: 2rem;
+            color: var.$gray;
+            margin: -0.3rem;
+          }
+        }
+      }
+    }
+
+    .custom-checkbox label {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
     }
   }
 }
