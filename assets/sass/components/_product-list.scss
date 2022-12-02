@@ -5,7 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 100%;
+  max-width: 95%;
+
+  @include var.breakpoint(767px) {
+    margin: 0 auto;
+  }
 
   .custom-product-list__header {
     display: flex;
@@ -45,6 +49,18 @@
         text-align: left;
         display: block;
         max-width: 259px;
+      }
+
+      .products {
+        @include var.breakpoint(767px) {
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+
+          .product {
+            width: auto !important;
+          }
+        }
       }
     }
   }
@@ -104,6 +120,69 @@
       &:hover {
         background: var.$mediumOrange;
         color: white;
+      }
+    }
+  }
+}
+
+.custom__tree {
+  max-width: 70%;
+  margin: 0 auto;
+
+  .current-category {
+    font-size: 4.6rem;
+    color: black;
+    font-weight: 400;
+    font-family: var.$gallery;
+    text-decoration: none;
+    text-transform: initial;
+    margin-bottom: 10rem;
+    display: flow-root;
+
+    @include var.breakpoint(767px) {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: var.$avenirRegular;
+    color: var.$mediumOrange;
+    margin-bottom: 1.1rem;
+    display: flow-root;
+
+    @include var.breakpoint(767px) {
+      text-align: center;
+    }
+  }
+
+  .category-sub-menu__container .category-sub-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 1rem;
+
+    @include var.breakpoint(767px) {
+      align-items: center;
+      margin-left: 0;
+    }
+
+    a {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-family: var.$avenirLight;
+      color: var.$gray;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: var.$mediumOrange;
+      }
+
+      @include var.breakpoint(767px) {
+        text-align: center;
       }
     }
   }
