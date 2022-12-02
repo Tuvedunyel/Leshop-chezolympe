@@ -19,6 +19,7 @@ article.product-categories {
   &:nth-of-type(odd) .product-categories__left-side {
     grid-column: 1;
     grid-row: 1;
+    height: fit-content;
 
     @include var.breakpoint(laptop) {
       grid-column: 1;
@@ -43,7 +44,7 @@ article.product-categories {
     justify-content: center;
     align-items: start;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding-inline: 5.8rem;
     gap: 3.2rem;
     grid-row: 1;
@@ -59,7 +60,7 @@ article.product-categories {
   h2 {
     text-align: start;
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: var.$normal;
     font-family: var.$gallery;
     @include var.breakpoint(laptop) {
       text-align: center;
@@ -68,7 +69,7 @@ article.product-categories {
 
   p {
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
     color: var.$gray;
     max-width: 408px;
@@ -81,11 +82,11 @@ article.product-categories {
 
   a {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
     color: var.$mediumOrange;
     text-decoration: none;
-    padding: 2rem 2rem 1.2rem 2rem;
+    padding: 2rem;
     border: 1px solid var.$mediumOrange;
     border-radius: 1rem;
     text-align: start;
@@ -181,7 +182,7 @@ article.product-categories {
       color: var.$gray;
       font-size: 1.8rem;
       font-family: var.$avenirLight;
-      font-weight: 300;
+      font-weight: var.$light;
       text-align: center;
     }
   }
@@ -231,7 +232,7 @@ article.product-categories {
         color: var.$gray;
         font-size: 1.8rem;
         font-family: var.$avenirLight;
-        font-weight: 300;
+        font-weight: var.$light;
         line-height: 1;
       }
     }

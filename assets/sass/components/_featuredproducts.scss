@@ -26,6 +26,7 @@
     margin-top: 1.4rem;
     font-size: 1.8rem;
     font-family: var.$avenirLight;
+    font-weight: var.$light;
     text-align: center;
     max-width: 780px;
     margin-inline: auto;
@@ -119,7 +120,7 @@
     h3 a {
       font-size: 1.9rem !important;
       font-family: var.$avenirRegular;
-      font-weight: 500;
+      font-weight: var.$normal;
       color: var.$gray;
       text-align: left;
       max-width: 259px;
@@ -142,7 +143,7 @@
   .regular-price {
     font-size: 2rem;
     font-family: var.$avenirRegular;
-    font-weight: 900;
+    font-weight: var.$black;
     color: var.$darkOrange;
     text-decoration: line-through;
     text-align: center;
@@ -153,7 +154,7 @@
     font-size: 3.2rem;
     color: var.$gray;
     font-family: var.$avenirRegular;
-    font-weight: 900;
+    font-weight: var.$black;
     text-align: center;
   }
 }

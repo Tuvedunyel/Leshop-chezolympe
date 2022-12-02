@@ -23,7 +23,7 @@
     color: var.$gray;
     opacity: 0.5;
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
     transition: 0.3s ease-in-out;
     height: fit-content;
@@ -40,7 +40,7 @@
     color: var.$gray;
     opacity: 1;
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
   }
 }

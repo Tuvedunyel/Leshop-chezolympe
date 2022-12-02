@@ -215,7 +215,7 @@ main #wrapper {
     font-size: 1.8rem;
     color: var.$gray;
     font-family: var.$avenirLight;
-    font-weight: 300;
+    font-weight: var.$light;
     max-width: 504px;
   }
 
@@ -224,7 +224,8 @@ main #wrapper {
     color: var.$mediumOrange;
     background: white;
     font-family: var.$avenirLight;
-    padding: 1.6rem 5.4rem 0.4rem 5.6rem;
+    font-weight: var.$light;
+    padding: 1.6rem 5.4rem 1.6rem 5.6rem;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
     text-decoration: none;

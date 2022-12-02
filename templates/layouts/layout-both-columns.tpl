@@ -6,6 +6,7 @@
 <head>
     {block name='head'}
         {include file='_partials/head.tpl'}
+        <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     {/block}
 </head>
 

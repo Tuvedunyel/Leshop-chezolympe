@@ -32,6 +32,7 @@ h1 .title_auth {
   .help-block li {
     font-size: 1.8rem;
     font-family: var.$avenirRegular;
+    font-weight: var.$normal;
     color: var.$gray;
   }
 
@@ -71,6 +72,7 @@ h1 .title_auth {
       color: white;
       margin-top: 0.7rem;
       font-family: var.$avenirRegular;
+      font-weight: var.$normal;
       width: 100% !important;
       padding: 0 !important;
     }
@@ -89,7 +91,7 @@ h1 .title_auth {
     float: unset;
     width: 116px;
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: var.$black;
     font-family: var.$avenirRegular;
     color: white;
     text-align: left;
@@ -108,7 +110,7 @@ h1 .title_auth {
     height: 55px;
     font-size: 1.8rem;
     font-family: var.$avenirRegular;
-
+    font-weight: var.$normal;
     @include var.breakpoint(mobile) {
       width: 100%;
     }
@@ -131,7 +133,7 @@ h1 .title_auth {
     color: white;
     text-decoration: none;
     font-family: var.$avenirRegular;
-    font-weight: 900;
+    font-weight: var.$black;
   }
 }
 
@@ -144,11 +146,11 @@ h1 .title_auth {
     background: var.$mediumOrange;
     color: white;
     font-size: 2.7rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
     border-radius: 10px;
     border: 1px solid var.$mediumOrange;
-    padding: 1.7rem 4.3rem 0.3rem 4.3rem !important;
+    padding: 1.7rem 4.3rem !important;
     transition: 0.3s ease-in-out;
     text-transform: initial;
 
@@ -179,7 +181,7 @@ hr {
 
   p {
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: var.$black;
     font-family: var.$avenirRegular;
     color: var.$gray;
 
@@ -190,7 +192,7 @@ hr {
 
   a {
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: var.$black;
     font-family: var.$avenirRegular;
     color: var.$mediumOrange;
     text-decoration: underline;
@@ -218,7 +220,7 @@ hr {
 
     .radio-inline {
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: var.$light;
       font-family: var.$avenirLight;
       width: auto;
 
@@ -282,7 +284,7 @@ hr {
 
     .custom-checkbox label {
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: var.$light;
       font-family: var.$avenirLight;
     }
   }

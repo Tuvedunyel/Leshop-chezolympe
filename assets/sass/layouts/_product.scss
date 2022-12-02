@@ -107,7 +107,7 @@
         color: var.$mediumOrange;
         font-size: 2rem;
         font-family: var.$avenirRegular;
-        font-weight: 900;
+        font-weight: var.$black;
         text-decoration: line-through;
       }
     }
@@ -123,7 +123,7 @@
         color: var.$gray;
         font-size: 3.2rem;
         font-family: var.$avenirRegular;
-        font-weight: 900;
+        font-weight: var.$black;
       }
 
       .discount {
@@ -141,7 +141,7 @@
 
     h3 {
       font-size: 1.8rem;
-      font-weight: 900;
+      font-weight: var.$black;
       font-family: var.$avenirRegular;
       color: var.$gray;
       margin-bottom: 0.5rem;
@@ -150,7 +150,7 @@
     p {
       font-size: 1.8rem;
       font-family: var.$avenirLight;
-      font-weight: 300;
+      font-weight: var.$light;
       color: var.$gray;
 
       &:not(:first-of-type) {
@@ -167,7 +167,7 @@
     display: block !important;
     color: var.$mediumOrange;
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: var.$light;
     font-family: var.$avenirLight;
     text-align: left;
     margin-top: 0.8rem;
@@ -186,11 +186,11 @@
       align-items: center;
       border: 1px solid var.$gray;
       border-radius: 10px;
-      padding: 1rem 3.4rem 0 3.4rem;
+      padding: 1rem 3.4rem;
       color: var.$gray;
       font-size: 2rem;
       font-family: var.$avenirLight;
-      font-weight: 300;
+      font-weight: var.$light;
       text-align: center;
       cursor: pointer;
       transition: 0.3s ease-in-out;
@@ -207,7 +207,7 @@
     color: var.$gray;
     font-size: 1.8rem;
     font-family: var.$avenirLight;
-    font-weight: 300;
+    font-weight: var.$light;
     text-align: left;
   }
 
@@ -277,7 +277,7 @@
       font-size: 2.4rem;
       color: var.$mediumOrange;
       font-family: var.$avenirRegular;
-      font-weight: 900;
+      font-weight: var.$black;
       text-align: center;
     }
 
@@ -295,7 +295,7 @@
         font-size: 3.2rem;
         color: var.$mediumOrange;
         font-family: var.$avenirRegular;
-        font-weight: 900;
+        font-weight: var.$black;
         line-height: 0;
         pointer-events: none;
       }
@@ -312,8 +312,8 @@
       color: white;
       font-size: 2.7rem;
       font-family: var.$avenirLight;
-      font-weight: 300;
-      padding: 1.7rem 4.2rem 0.2rem 4.2rem;
+      font-weight: var.$light;
+      padding: 1.7rem 4.2rem;
       height: fit-content !important;
       transition: 0.3s ease-in-out;
 
@@ -359,7 +359,7 @@
       p {
         display: block;
         font-size: 1.4rem;
-        font-weight: 300;
+        font-weight: var.$light;
         font-family: var.$avenirLight;
         color: var.$gray;
         text-align: center;
@@ -430,7 +430,7 @@
 
     p {
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: var.$light;
       font-family: var.$avenirLight;
       color: var.$gray;
       text-align: center;
@@ -495,7 +495,6 @@
 
   .left {
     border-radius: 38px;
-    height: 95%;
     padding-bottom: 5rem;
 
     @include var.breakpoint(858px) {
@@ -526,14 +525,14 @@
 
     strong {
       font-family: var.$avenirRegular;
-      font-weight: 900;
+      font-weight: var.$black;
       margin-bottom: 4rem;
       display: flow-root;
     }
 
     p {
       font-family: var.$avenirLight;
-      font-weight: 300;
+      font-weight: var.$light;
     }
   }
 }
@@ -554,7 +553,7 @@
     align-items: center;
     width: 100%;
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: var.$normal;
     font-family: var.$avenirRegular;
     color: var.$mediumOrange;
     margin-top: 1.2rem;
@@ -590,7 +589,7 @@
     transition: transform 0.3s ease-in-out;
     font-size: 1.8rem;
     font-family: var.$avenirLight;
-    font-weight: 300;
+    font-weight: var.$light;
     color: var.$gray;
   }
 
@@ -603,7 +602,7 @@
     transition: transform 0.3s ease-in-out;
     font-size: 1.8rem;
     font-family: var.$avenirRegular;
-    font-weight: 900;
+    font-weight: var.$black;
     color: var.$gray;
   }
 }
@@ -637,7 +636,7 @@
       align-items: center;
       width: 100%;
       font-size: 3rem;
-      font-weight: 900;
+      font-weight: var.$black;
       font-family: var.$avenirRegular;
       color: var.$mediumOrange;
       margin-top: 1.2rem;
@@ -690,7 +689,7 @@
       font-size: 1.8rem;
       color: var.$gray;
       font-family: var.$avenirRegular;
-      font-weight: 900;
+      font-weight: var.$black;
       justify-self: start;
     }
 
@@ -714,7 +713,7 @@
       grid-column: 3;
       grid-row: 1;
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: var.$light;
       font-family: var.$avenirLight;
       justify-self: end;
 
@@ -768,10 +767,11 @@
     border-radius: 10px;
     font-size: 2.7rem;
     font-family: var.$avenirLight;
+    font-weight: var.$light;
     border: 1px solid var.$mediumOrange;
     transition: 0.3s ease-in-out;
     box-shadow: none;
-    padding: 1.7rem 4.3rem 0.3rem 4.3rem;
+    padding: 1.7rem 4.3rem;
     min-height: fit-content;
     height: fit-content;
 
@@ -790,14 +790,15 @@
   padding: 0;
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
     font-family: var.$avenirLight;
+    font-weight: var.$light;
   }
 
   h4 {
     font-size: 1.8rem;
     font-family: var.$avenirRegular;
-    font-weight: 900;
+    font-weight: var.$black;
     color: var.$gray;
     margin-bottom: 0.6rem;
   }
