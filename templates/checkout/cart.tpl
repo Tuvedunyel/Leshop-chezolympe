@@ -32,7 +32,7 @@
             </div>
 
             <!-- Right Block: cart subtotal & cart total -->
-            <div class="cart-grid-right">
+            <div class="cart-grid-right custom__cart-grid-right">
 
                 {block name='cart_summary'}
                     <div class="card cart-summary">
