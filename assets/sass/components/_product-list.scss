@@ -31,6 +31,29 @@
   #products {
     min-width: 100%;
 
+    .products.row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 4.4rem;
+      row-gap: 6.2rem;
+
+      .product.js-product {
+        width: 100%;
+      }
+
+      @include var.breakpoint(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3.2rem;
+        column-gap: 2.2rem;
+      }
+
+      @include var.breakpoint(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2.2rem;
+        column-gap: 0;
+      }
+    }
+
     .top-commu {
       background: transparent;
       padding: 0;

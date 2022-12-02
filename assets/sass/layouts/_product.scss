@@ -28,6 +28,18 @@
     }
   }
 
+  #content {
+    width: fit-content;
+
+    .image-container {
+      width: fit-content;
+    }
+
+    .product-cover {
+      width: fit-content;
+    }
+  }
+
   .product-cover {
     position: relative;
     z-index: 1;
@@ -71,6 +83,7 @@
   .js-qv-mask {
     position: relative;
     z-index: 1;
+    margin: 0;
 
     ul {
       display: flex;
@@ -553,7 +566,7 @@
     align-items: center;
     width: 100%;
     font-size: 3rem;
-    font-weight: var.$normal;
+    font-weight: var.$black;
     font-family: var.$avenirRegular;
     color: var.$mediumOrange;
     margin-top: 1.2rem;
