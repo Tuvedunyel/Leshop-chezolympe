@@ -1,1 +1,104 @@
 @use "../abstracts" as var;
+
+.custom-cart {
+  max-width: 87%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  justify-items: start;
+  column-gap: 2rem;
+  align-items: start;
+
+  .card-block {
+    h1 {
+      font-size: 4.6rem;
+      font-weight: 400;
+      font-family: var.$gallery;
+      text-transform: initial;
+    }
+  }
+
+  .no-items {
+    font-size: 1.8rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+    color: var.$gray;
+  }
+
+  .card-block {
+    padding: 0;
+  }
+
+  .cart-overview {
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  #continue-shopping__custom {
+    background: #fff;
+    display: flow-root;
+    margin-top: 2rem;
+    border: 1px solid var.$mediumOrange;
+    color: var.$mediumOrange;
+    font-size: 2.7rem;
+    font-weight: 300;
+    font-family: "Avenir LT std 35", sans-serif;
+    padding: 1.7rem 4rem;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+    width: fit-content;
+
+    &:hover {
+      background: var.$mediumOrange;
+      color: #fff;
+    }
+  }
+
+  .custom-command {
+    display: flow-root;
+    margin-top: 2rem;
+    border: 1px solid var.$mediumOrange;
+    color: white;
+    background: var.$mediumOrange;
+    font-size: 2.7rem;
+    font-weight: 300;
+    font-family: "Avenir LT std 35", sans-serif;
+    padding: 1.7rem 4rem;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+
+    &:hover {
+      background: #fff;
+      color: var.$mediumOrange;
+      border-color: var.$mediumOrange;
+    }
+
+    &.disabled {
+      opacity: 0.6;
+
+      &:hover {
+        background: var.$mediumOrange;
+        color: #fff;
+      }
+    }
+  }
+
+  .cart-summary {
+    margin-bottom: 0;
+  }
+}
+
+.top-commu .product-description h2.h3 {
+  text-align: left;
+
+  a {
+    font-size: 1.9rem !important;
+    font-family: "Avenir LT 65", sans-serif;
+    font-weight: 500;
+    color: #464646;
+    text-align: left;
+    display: flow-root;
+    max-width: 259px;
+    text-align: left;
+  }
+}
