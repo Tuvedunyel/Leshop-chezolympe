@@ -73,6 +73,64 @@
                     <h2>Nous suivre sur instagram</h2>
                     <p>Suis-nous sur Instagram et retrouve tous nos conseils</p>
                 </div>
+                <ul class="insta-image">
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-un.jpg" alt="Photo d'une femme se cachant les seins">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-trois.jpg" alt="Deux femmes s'embrassant en chemise">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-quatre.jpg"
+                                alt="Femme en lingerie allongée et courbant le dos">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-cinq.jpg" alt="Femme nue allongée les jambes relevées">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-six.jpg"
+                                alt="Femme posant nue avec un drap entre les jambes">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/chez.olympe/" target="_blank" title="Voir le post instagram"
+                            rel="noreferrer noopener">
+                            <span class="screen-reader-text">
+                                Description instagram
+                            </span>
+                            <img src="{$urls.img_url}insta-deux.jpg" alt="Deux femme allongées dans un lit en chemise">
+                        </a>
+                    </li>
+                </ul>
             </section>
 
             <section class="benefits product-benefits">

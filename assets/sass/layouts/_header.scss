@@ -199,6 +199,10 @@
   top: unset !important;
   left: 0 !important;
 
+  @include var.breakpoint(laptop) {
+    display: none !important;
+  }
+
   ul {
     background: white;
     flex-direction: column !important;
