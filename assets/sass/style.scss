@@ -39,3 +39,8 @@ body {
     margin: auto;
   }
 }
+
+.col-md-3 {
+  width: 0 !important;
+  float: unset !important;
+}
