@@ -35,19 +35,19 @@
 						</form>
 					</div>
 
-					<div class="product-description">
+					<a href="{$product.url}" content="{$product.url}" class="product-description">
 						{block name='product_name'}
 							{if $page.page_name == 'index'}
 								<h3 class="h3 product-title">
-									<a href="{$product.url}" content="{$product.url}">{$product.name|truncate:40:'...'}</a>
+									{$product.name|truncate:40:'...'}
 								</h3>
 							{else}
 								<h2 class="h3 product-title">
-									<a href="{$product.url}" content="{$product.url}">{$product.name|truncate:40:'...'}</a>
+									{$product.name|truncate:40:'...'}
 								</h2>
 							{/if}
 						{/block}
-					</div>
+					</a>
 				</div>
 
 				<div class="bottom-product">

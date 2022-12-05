@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  max-width: 95%;
+  width: min(1000px, 95%);
 
-  @include var.breakpoint(767px) {
+  @include var.breakpoint(1333px) {
     margin: 0 auto;
   }
 
@@ -36,9 +36,15 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 4.4rem;
       row-gap: 6.2rem;
+      margin-inline: 0 !important;
 
       .product.js-product {
         width: 100%;
+        padding: 0;
+
+        .thumbnail-container {
+          width: 100%;
+        }
       }
 
       @include var.breakpoint(tablet) {
@@ -62,6 +68,11 @@
         border: 1px solid var.$lightOrange;
         background: var.$lightOrange;
         border-radius: 38px;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: white;
+        }
       }
 
       h2 a {
@@ -126,6 +137,11 @@
       right: 3%;
       color: var.$mediumOrange;
       font-weight: 100;
+      width: fit-content;
+      height: fit-content;
+      top: 0;
+      bottom: 0;
+      margin: auto;
     }
   }
 

@@ -71,7 +71,7 @@
   .thumbnail-top {
     background: white;
     padding: 2rem;
-    border-radius: 38px;
+    border-radius: 37px;
     position: relative;
   }
 
@@ -110,14 +110,20 @@
     background: transparent;
     border: 1px solid white;
     border-radius: 38px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background: white;
+    }
   }
 
   .product-description {
     background: transparent;
+    display: flow-root;
     padding: 1.8rem;
 
     h3,
-    h3 a {
+    h2 {
       font-size: 1.9rem !important;
       font-family: var.$avenirRegular;
       font-weight: var.$normal;
@@ -144,7 +150,7 @@
     font-size: 2rem;
     font-family: var.$avenirRegular;
     font-weight: var.$black;
-    color: var.$darkOrange;
+    color: var.$mediumOrange;
     text-decoration: line-through;
     text-align: center;
     margin-right: 1.7rem;

@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="75" viewBox="0 0 71 75"><defs><style>.a{fill:none;}.b{fill:#e9d7b2;}.c{clip-path:url(#a);}.d{fill:#e30046;}</style><clipPath id="a"><rect class="a" width="32.824" height="31.513"/></clipPath></defs><g transform="translate(-1225)"><path class="b" d="M0,0H71V39.5A35.5,35.5,0,0,1,35.5,75h0A35.5,35.5,0,0,1,0,39.5Z" transform="translate(1225)"/><g transform="translate(1244.088 21.354)"><g class="c"><path class="d" d="M16.41,31.514a2.809,2.809,0,0,0,1.9-.737c3.679-3.366,14.513-13.843,14.513-20.512a10.245,10.245,0,0,0-16.412-8.2A10.245,10.245,0,0,0,0,10.265c0,6.671,10.842,17.152,14.518,20.513A2.809,2.809,0,0,0,16.41,31.514Zm.788-2.288a1.154,1.154,0,0,1-1.573,0C10.828,24.758,2.171,15.37,2.171,10.262a8.053,8.053,0,0,1,13.51-5.947,1.08,1.08,0,0,0,1.465,0,8.053,8.053,0,0,1,13.51,5.947c0,5.112-8.661,14.5-13.458,18.964" transform="translate(0 -0.001)"/></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="75" viewBox="0 0 71 75">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="32.824" height="31.513" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="account-connected" transform="translate(-1225)">
+    <path id="Tracé_1" data-name="Tracé 1" d="M0,0H71V39.5A35.5,35.5,0,0,1,35.5,75h0A35.5,35.5,0,0,1,0,39.5Z" transform="translate(1225)" fill="#e9d7b2"/>
+    <g id="Groupe_2" data-name="Groupe 2" transform="translate(1244.088 21.354)">
+      <g id="Groupe_1" data-name="Groupe 1" clip-path="url(#clip-path)">
+        <path id="Tracé_2" data-name="Tracé 2" d="M16.41,31.514a2.809,2.809,0,0,0,1.9-.737c3.679-3.366,14.513-13.843,14.513-20.512a10.245,10.245,0,0,0-16.412-8.2A10.245,10.245,0,0,0,0,10.265c0,6.671,10.842,17.152,14.518,20.513A2.809,2.809,0,0,0,16.41,31.514Zm.788-2.288a1.154,1.154,0,0,1-1.573,0C10.828,24.758,2.171,15.37,2.171,10.262a8.053,8.053,0,0,1,13.51-5.947,1.08,1.08,0,0,0,1.465,0,8.053,8.053,0,0,1,13.51,5.947c0,5.112-8.661,14.5-13.458,18.964" transform="translate(0 -0.001)" fill="#c09426"/>
+      </g>
+    </g>
+  </g>
+</svg>

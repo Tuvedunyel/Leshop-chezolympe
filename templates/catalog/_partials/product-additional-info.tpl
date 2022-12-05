@@ -8,7 +8,7 @@
              <img src="{$urls.img_url}cb.svg" alt="Illustration d'une carte bleue">
              <p>Paiement sécurisé</p>
          </li>
-         <li>
+         <li class="cils-container">
              <img src="{$urls.img_url}cils.svg" alt="Illustration d'un oeil fermé">
              <p>Livraison discrète</p>
          </li>

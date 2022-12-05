@@ -2,6 +2,12 @@
     <div class="cart-overview js-cart custom__cart-overview"
         data-refresh-url="{url entity='cart' params=['ajax' => true, 'action' => 'refresh']}">
         {if $cart.products}
+            <ul class="cart-type-items">
+                <li>Produits</li>
+                <li>Prix</li>
+                <li>Quantité</li>
+                <li>Total</li>
+            </ul>
             <ul class="cart-items custom__cart-items">
                 {foreach from=$cart.products item=product}
                     <li class="cart-item">

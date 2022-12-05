@@ -224,6 +224,7 @@ main #wrapper {
     color: var.$mediumOrange;
     background: white;
     font-family: var.$avenirLight;
+    border: 1px solid white;
     font-weight: var.$light;
     padding: 1.6rem 5.4rem 1.6rem 5.6rem;
     border-radius: 10px;
@@ -236,8 +237,8 @@ main #wrapper {
     }
 
     &:hover {
-      background: var.$lightOrange;
-      color: var.$gray;
+      background: transparent;
+      color: white;
     }
   }
 }

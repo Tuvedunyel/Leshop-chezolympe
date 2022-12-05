@@ -59,7 +59,7 @@ article.product-categories {
 
   h2 {
     text-align: start;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: var.$normal;
     font-family: var.$gallery;
     @include var.breakpoint(laptop) {
@@ -105,14 +105,15 @@ article.product-categories {
   .product-categories__leaf-container {
     position: absolute;
     background: url("../img/leaf.svg") no-repeat;
-    width: 52px;
-    height: 104px;
+    width: 72px;
+    height: 134px;
     top: 0;
     bottom: 0;
     margin-block: auto;
     right: 10%;
     z-index: 2;
     transform: rotateY(180deg);
+    background-size: cover;
 
     @include var.breakpoint(658px) {
       display: none;
