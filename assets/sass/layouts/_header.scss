@@ -215,3 +215,21 @@
     gap: 1.3rem;
   }
 }
+
+.cart-hover-content {
+  display: none;
+  position: absolute;
+  top: 80%;
+  right: 1%;
+  background: white;
+  border: 13px solid var.$darkOrange;
+  padding: 3.3rem;
+
+  &:hover {
+    display: block;
+  }
+}
+
+#_desktop_cart:hover ~ .cart-hover-content {
+  display: block;
+}

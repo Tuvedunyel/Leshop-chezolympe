@@ -23,7 +23,7 @@
 
 
             <div class="form-group">
-                <label class="form-control-label" for="id_contact">{l s='Subject' d='Shop.Forms.Labels'}</label>
+                <label class="form-control-label" for="id_contact">Sujet *</label>
                 <select name="id_contact" id="id_contact" class="form-control form-control-select">
                     {foreach from=$contact.contacts item=contact_elt}
                     <option value="{$contact_elt.id_contact}">{$contact_elt.name}</option>
@@ -32,14 +32,14 @@
             </div>
 
             <div class="form-group">
-                <label class="form-control-label" for="email">{l s='Email address' d='Shop.Forms.Labels'}</label>
+                <label class="form-control-label" for="email">Adresse mail *</label>
                 <input id="email" class="form-control" name="from" type="email" value="{$contact.email}"
                     placeholder="{l s='your@email.com' d='Shop.Forms.Help'}">
             </div>
 
             {if $contact.orders}
             <div class="form-group">
-                <label class="form-control-label" for="id-order">{l s='Order reference' d='Shop.Forms.Labels'}</label>
+                <label class="form-control-label" for="id-order">Référence de votre commande *</label>
                 <select id="id-order" name="id_order" class="form-control form-control-select">
                     <option value="">{l s='Select reference' d='Shop.Forms.Help'}</option>
                     {foreach from=$contact.orders item=order}
@@ -57,9 +57,6 @@
                 <label class="form-control-label" for="file-upload">{l s='Attachment' d='Shop.Forms.Labels'}</label>
                 <input id="file-upload" type="file" name="fileUpload" class="filestyle"
                     data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
-                <span class="col-md-3 form-control-comment">
-                    {l s='optional' d='Shop.Forms.Help'}
-                </span>
             </div>
             {/if}
 

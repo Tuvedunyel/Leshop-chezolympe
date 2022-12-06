@@ -1,0 +1,139 @@
+@use "../abstracts" as var;
+
+.ht_cart {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .cart-wishlist-item {
+    display: grid;
+    grid-template-columns: 94px 1fr;
+    place-items: center;
+    column-gap: 1.5rem;
+
+    @include var.breakpoint(mini) {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+      width: 100%;
+      justify-items: start;
+    }
+  }
+
+  .minicart-img,
+  .minicart-img img {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var.$lightOrange;
+
+    @include var.breakpoint(mini) {
+      max-width: 95px;
+      justify-self: center;
+    }
+  }
+
+  h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var.$gallery;
+    color: black;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    color: var.$gray;
+
+    .mini-cart__price {
+      margin-block: 1rem;
+    }
+  }
+
+  .remove-from-cart {
+    margin-top: 0.9rem;
+    font-size: 1.2rem;
+    color: var.$gray;
+    opacity: 0.65;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: var.$mediumOrange !important;
+    }
+  }
+
+  .cart-summary {
+    margin-top: 4.3rem;
+
+    .shipping {
+      margin-block: 1rem;
+
+      .value {
+        text-transform: uppercase;
+      }
+    }
+
+    .value,
+    .label {
+      font-size: 1.8rem;
+      font-weight: var.$light;
+      font-family: var.$avenirLight;
+      color: var.$gray;
+    }
+  }
+
+  .cart-wishlist-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.3rem;
+    margin-top: 2.7rem;
+
+    a {
+      width: 100%;
+      padding-block: 2.2rem;
+      font-family: var.$avenirLight;
+      font-weight: var.$light;
+      font-size: 2rem;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &.cart-wishlist-viewcart {
+        color: var.$gray !important;
+        background: transparent;
+        border: 1px solid var.$gray;
+
+        &:hover {
+          background: var.$gray;
+          color: white !important;
+        }
+      }
+
+      &.cart-wishlist-checkout {
+        background: var.$darkOrange;
+        color: white !important;
+        border: 1px solid var.$darkOrange;
+
+        &:hover {
+          background: transparent;
+          color: var.$darkOrange !important;
+        }
+      }
+    }
+  }
+}

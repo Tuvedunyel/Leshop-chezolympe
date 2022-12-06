@@ -43,10 +43,23 @@
   justify-content: center;
   align-items: center;
   background: var.$mediumOrange;
-  border-radius: 9px;
+  border-radius: 9px !important;
   margin: 0 auto;
+  margin-top: 2rem;
   max-width: 75%;
   padding: 2.9rem 5.2rem;
+
+  @include var.breakpoint(tablet) {
+    max-width: 95%;
+  }
+
+  @include var.breakpoint(mobile) {
+    max-width: 100%;
+  }
+
+  @include var.breakpoint(mini) {
+    padding: 2.9rem 2.2rem;
+  }
 
   .form-group {
     display: grid;
@@ -55,6 +68,10 @@
     width: 100%;
     gap: 1rem;
 
+    @include var.breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
+
     label {
       font-size: 1.8rem;
       justify-self: start;
@@ -62,6 +79,46 @@
       font-weight: var.$black;
       font-family: var.$avenirRegular;
       text-align: left;
+
+      @include var.breakpoint(mobile) {
+        text-align: center;
+        justify-self: center;
+      }
+    }
+
+    .bootstrap-filestyle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .group-span-filestyle {
+        width: auto;
+      }
+
+      label.btn {
+        margin: 0;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        background: var.$lightOrange;
+        font-family: var.$avenirRegular;
+        font-weight: var.$black;
+        padding: 1rem 2rem;
+        text-transform: initial;
+        transition: 0.3s ease-in-out;
+        color: var.$mediumOrange;
+        border: 1px solid var.$lightOrange;
+
+        &:hover {
+          background: var.$mediumOrange;
+          color: white;
+        }
+      }
+    }
+
+    select {
+      min-height: 55px;
     }
 
     input,
@@ -69,7 +126,7 @@
     textarea {
       background: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 10px !important;
       padding: 1.6rem 1.8rem;
       font-size: 1.8rem;
       font-weight: var.$light;
