@@ -1,0 +1,38 @@
+@use "../abstracts" as var;
+
+.my-account__link-container {
+  max-width: min(1400px, 95%);
+  margin: 0 auto;
+
+  .links {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5.2rem;
+    row-gap: 4.2rem;
+  }
+
+  .link {
+    background: var.$mediumOrange;
+    border-radius: 10px;
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.1rem;
+    padding-block: 2.3rem !important;
+
+    span {
+      text-align: center !important;
+      font-size: 1.8rem !important;
+      font-weight: var.$black !important;
+      font-family: var.$avenirRegular !important;
+      color: white !important;
+      text-transform: initial !important;
+
+      max-width: 237px;
+    }
+  }
+}
