@@ -9,6 +9,16 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5.2rem;
     row-gap: 4.2rem;
+
+    @include var.breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3.2rem;
+      row-gap: 2.2rem;
+    }
+
+    @include var.breakpoint(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .link {
