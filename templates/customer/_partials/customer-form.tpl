@@ -22,7 +22,11 @@
                  {block "form_buttons"}
                      <button id="custom__create-account" class="btn btn-primary form-control-submit float-xs-right"
                          data-link-action="save-customer" type="submit">
-                         Créer mon compte
+                         {if $page.page_name === "identity"}
+                             Sauvegarder
+                         {else}
+                             Créer mon compte
+                         {/if}
                      </button>
                  {/block}
              </footer>
