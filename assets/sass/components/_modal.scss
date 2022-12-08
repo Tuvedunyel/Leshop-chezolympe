@@ -6,12 +6,80 @@
 
   .modal-header {
     border: none;
+
+    h5 {
+      font-size: 2rem;
+      font-weight: 400;
+      font-family: var.$gallery;
+      margin-bottom: 3rem;
+      display: flow-root;
+    }
+
+    button.close {
+      align-self: start;
+    }
   }
 
   .modal-body {
     padding: 0 !important;
     max-width: 90%;
     margin: 0 auto;
+
+    .wishlist-list {
+      border-top: 0;
+      border-bottom: 0;
+
+      .wishlist-list-item {
+        background: var.$lightOrange;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        border: 1px solid var.$lightOrange;
+        transition: all 0.3s ease-in-out;
+
+        p {
+          color: var.$gray;
+          font-size: 1.6rem;
+          font-weight: var.$black;
+          font-family: var.$avenirRegular;
+          margin-bottom: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          background: transparent;
+          border: 1px solid var.$lightOrange !important;
+
+          p {
+            color: var.$gray !important;
+          }
+        }
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      label {
+        font-size: 1.6rem;
+        font-weight: var.$normal;
+        font-family: var.$avenirRegular;
+        color: var.$gray;
+      }
+
+      input {
+        min-height: 55px;
+        background: white;
+        border: 1px solid var.$mediumOrange;
+        border-radius: 10px !important;
+        font-size: 1.8rem;
+        font-weight: var.$light;
+        font-family: var.$avenirLight;
+      }
+    }
   }
 
   .product-part__container {
@@ -220,6 +288,64 @@
         color: var.$mediumOrange;
         background: white;
       }
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+
+  button {
+    border-radius: 10px;
+    border: 1px solid var.$mediumOrange;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    transition: 0.3s ease-in-out;
+
+    &.modal-cancel {
+      background: transparent !important;
+      color: var.$mediumOrange !important;
+
+      &:hover {
+        background: var.$mediumOrange !important;
+        color: white !important;
+        opacity: 1 !important;
+      }
+    }
+
+    &.btn-primary {
+      background: var.$mediumOrange !important;
+      color: white !important;
+      margin-top: 1rem;
+
+      &:hover {
+        background: transparent !important;
+        color: var.$mediumOrange !important;
+        border: 1px solid var.$mediumOrange !important;
+      }
+    }
+  }
+
+  .wishlist-add-to-new {
+    font-size: 1.4rem;
+    color: var.$mediumOrange !important;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+    transition: all 0.3s ease-in-out;
+
+    i {
+      display: none;
+    }
+
+    &:hover {
+      color: var.$gray !important;
     }
   }
 }

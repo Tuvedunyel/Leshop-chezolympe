@@ -7,10 +7,11 @@
 {/block}
 
 {block name='page_content'}
-    <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
+    <h6 class="history-title">
+        {l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
     {if $orders}
-        <table class="table table-striped table-bordered table-labeled hidden-sm-down">
+        <table class="table table-striped table-bordered table-labeled hidden-sm-down history-table">
             <thead class="thead-default">
                 <tr>
                     <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>

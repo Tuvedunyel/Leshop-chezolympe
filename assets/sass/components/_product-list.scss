@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
   width: min(1000px, 95%);
 
   @include var.breakpoint(1333px) {
@@ -133,12 +134,11 @@
 
     .material-icons {
       position: absolute;
-      transform: rotate(90deg);
-      right: 3%;
+      right: 7%;
       color: var.$mediumOrange;
       font-weight: 100;
-      width: fit-content;
-      height: fit-content;
+      width: 10px;
+      height: 5px;
       top: 0;
       bottom: 0;
       margin: auto;

@@ -3,7 +3,7 @@
     <button class="btn-unstyle select-title custom__button-dropdown" rel="nofollow" data-toggle="dropdown"
         aria-label="{l s='Sort by selection' d='Shop.Theme.Global'}" aria-haspopup="true" aria-expanded="false">
         {if $listing.sort_selected}{$listing.sort_selected}{else}{l s='Select' d='Shop.Theme.Actions'}{/if}
-        <i class="material-icons float-xs-right">&#10095;</i>
+        <img src="{$urls.img_url}arrow-down.svg" alt="Ouvrir le tri" class="material-icons">
     </button>
     <div class="dropdown-menu">
         {foreach from=$listing.sort_orders item=sort_order}

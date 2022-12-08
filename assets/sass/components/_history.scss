@@ -1,0 +1,22 @@
+@use "../abstracts" as var;
+
+.history-title {
+  font-size: 1.8rem;
+  color: var.$gray;
+  font-weight: var.$black;
+  font-family: var.$avenirRegular;
+  display: flow-root;
+  width: 90%;
+  margin: 2rem auto 0 auto;
+}
+
+.history-table {
+  max-width: min(90%, 1400px);
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  th,
+  td {
+    font-size: 1.6rem;
+  }
+}

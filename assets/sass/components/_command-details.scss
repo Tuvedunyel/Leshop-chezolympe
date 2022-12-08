@@ -1,0 +1,116 @@
+@use "../abstracts" as var;
+
+#order-infos {
+  strong,
+  li,
+  a {
+    font-size: 1.6rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+
+  strong {
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+  }
+}
+
+#order-history {
+  h3 {
+    font-size: 1.8rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+  }
+
+  th,
+  td {
+    font-size: 1.6rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+}
+
+.history__addresses {
+  h4 {
+    font-size: 1.8rem !important;
+    font-weight: var.$black !important;
+    font-family: var.$avenirRegular;
+  }
+
+  address {
+    font-size: 1.8rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+}
+
+#order-products {
+  td,
+  th {
+    font-size: 1.6rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+}
+
+.table-bottom {
+  th,
+  td {
+    font-size: 1.6rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+}
+
+.order-message-form {
+  h3 {
+    font-size: 1.8rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: var.$light;
+    font-family: var.$avenirLight;
+  }
+
+  .form-group {
+    label {
+      font-size: 1.6rem;
+      font-weight: var.$light;
+      font-family: var.$avenirLight;
+    }
+
+    input,
+    select,
+    textarea {
+      background: white;
+      border-radius: 10px;
+      min-height: 55px;
+      font-size: 1.6rem;
+      font-family: var.$avenirLight;
+      font-weight: var.$light;
+      color: var.$gray;
+      border: 1px solid var.$mediumOrange;
+    }
+  }
+
+  button {
+    background: var.$mediumOrange;
+    border: 1px solid var.$mediumOrange;
+    color: white;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 2rem;
+
+    &:hover {
+      background: transparent;
+      color: var.$mediumOrange;
+      border: 1px solid var.$mediumOrange;
+    }
+  }
+}
