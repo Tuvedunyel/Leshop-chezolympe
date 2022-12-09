@@ -1,6 +1,9 @@
 @use "../abstracts" as var;
 
 #order-infos {
+  max-width: min(90%, 718px);
+  margin: 0 auto;
+
   strong,
   li,
   a {
@@ -16,6 +19,9 @@
 }
 
 #order-history {
+  max-width: min(90%, 718px);
+  margin: 0 auto;
+
   h3 {
     font-size: 1.8rem;
     font-weight: var.$black;
@@ -31,6 +37,9 @@
 }
 
 .history__addresses {
+  max-width: min(90%, 718px);
+  margin: 0 auto !important;
+
   h4 {
     font-size: 1.8rem !important;
     font-weight: var.$black !important;
@@ -45,6 +54,9 @@
 }
 
 #order-products {
+  max-width: min(90%, 718px);
+  margin: 0 auto;
+
   td,
   th {
     font-size: 1.6rem;
@@ -62,7 +74,15 @@
   }
 }
 
+.box {
+  max-width: min(90%, 718px);
+  margin: 0 auto;
+}
+
 .order-message-form {
+  max-width: min(90%, 718px);
+  margin: 0 auto;
+  padding: 0;
   h3 {
     font-size: 1.8rem;
     font-weight: var.$black;
