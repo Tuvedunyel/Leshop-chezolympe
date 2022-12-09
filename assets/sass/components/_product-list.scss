@@ -5,8 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-
   width: min(1000px, 95%);
+
+  &.search-part {
+    margin: 0 auto;
+  }
 
   @include var.breakpoint(1333px) {
     margin: 0 auto;

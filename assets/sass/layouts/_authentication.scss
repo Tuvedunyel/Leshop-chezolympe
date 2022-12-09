@@ -48,7 +48,8 @@ h1 .title_auth {
 .connect-input__container {
   background: var.$mediumOrange;
   border-radius: 9px;
-  width: 100%;
+  max-width: min(90%, 748px);
+  margin: 0 auto;
   padding: 3.5rem 5.2rem;
 
   @include var.breakpoint(mini) {
@@ -139,6 +140,9 @@ h1 .title_auth {
 
 .custom-login-footer {
   margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   #submit-login,
   #custom__create-account,

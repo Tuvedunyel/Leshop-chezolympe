@@ -67,6 +67,9 @@
   }
 
   .js-address-form {
+    max-width: min(90%, 718px);
+    margin: 0 auto;
+
     p {
       font-size: 1.8rem;
       font-weight: var.$light;
@@ -127,6 +130,9 @@
   }
 
   .delivery-options {
+    max-width: min(90%, 718px);
+    margin: 0 auto;
+
     .delivery-option {
       width: 100%;
       margin: 0 auto;

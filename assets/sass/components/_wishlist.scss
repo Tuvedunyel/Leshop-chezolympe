@@ -149,7 +149,14 @@ li.wishlist-products-item {
   }
 
   .wishlist-product-bottom {
-    display: none;
+    .wishlist-product-addtocart {
+      display: none;
+    }
+
+    .wishlist-button-add {
+      right: 7% !important;
+      top: 2% !important;
+    }
   }
 
   .wishlist-product-link {
@@ -179,6 +186,7 @@ li.wishlist-products-item {
     border-radius: 37px;
     position: initial;
     transform: translate(0);
+    background: white;
 
     &:hover {
       transform: translate(0);

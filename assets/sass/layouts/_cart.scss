@@ -8,6 +8,7 @@
   justify-items: start;
   column-gap: 6rem;
   align-items: start;
+  margin-bottom: 4rem;
 
   a.product-title-a {
     font-size: 3rem;
@@ -328,7 +329,8 @@
   width: 100%;
   margin-top: 8rem;
   background: var.$lightOrange;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
+  border-radius: 10px;
 
   .cart-summary {
     display: flex;
