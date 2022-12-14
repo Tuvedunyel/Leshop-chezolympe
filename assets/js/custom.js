@@ -24,6 +24,11 @@ const inputContainer = document.querySelectorAll(".input-container");
 const spanColor = document.querySelectorAll(
   ".input-container > label > .color"
 );
+const ratingLabel = document.querySelector(".criterion-rating > label");
+
+if (ratingLabel) {
+  ratingLabel.textContent = "Votre note : ";
+}
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
