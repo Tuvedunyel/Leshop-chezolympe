@@ -1,4 +1,4 @@
-const url = "https://chezolympe.test/wp-json/";
+const url = "https://btg-dev.com/chez-olympe/wp-json/";
 const burgerMenu = document.getElementById("burger_menu");
 const navMenu = document.querySelector(".responsive-header__container");
 const windowWidth = window.innerWidth;
@@ -20,6 +20,10 @@ const minus = document.getElementById("minus");
 const quantity = document.getElementById("quantity_wanted");
 const entretienHandler = document.getElementById("entretien-handler");
 const entretienContent = document.getElementById("entretien-content");
+const inputContainer = document.querySelectorAll(".input-container");
+const spanColor = document.querySelectorAll(
+  ".input-container > label > .color"
+);
 
 if (windowWidth <= 1250 && burgerMenu) {
   burgerMenu.addEventListener("click", () => {
@@ -301,8 +305,19 @@ if (selectToChange) {
 }
 
 if (colorInput && colorReturn) {
-  for (input of colorInput) {
-    input.addEventListener("click", (e) => {
+  const removeBorder = (style = "none", index = null) => {
+    for (element of inputContainer) {
+      element.style.border = "none";
+    }
+    if (style !== "none") {
+      inputContainer[index].style.border = `${style}`;
+    }
+  };
+
+  for (let i = 0; i < colorInput.length; i++) {
+    removeBorder();
+    colorInput[i].addEventListener("click", (e) => {
+      removeBorder(`1px solid ${spanColor[i].style.backgroundColor}`, i);
       colorReturn.textContent = e.target.title;
     });
   }

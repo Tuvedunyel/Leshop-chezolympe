@@ -425,6 +425,16 @@
       align-items: center;
       height: auto;
       gap: 1.2rem;
+
+      p:first-of-type {
+        width: 200px;
+        height: 200px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     @include var.breakpoint(tablet) {
@@ -442,10 +452,14 @@
     }
 
     img {
-      width: 216px;
-      height: 216px;
-      border-radius: 50%;
+      border-radius: 0 !important;
       margin-bottom: 1.2rem;
+      background: white;
+      width: 136px;
+      height: 136px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     p {
@@ -761,7 +775,7 @@
     border: 1px solid var.$mediumOrange;
     transition: 0.3s ease-in-out;
     box-shadow: none;
-    padding: 1.7rem 4.3rem 0.3rem 4.3rem;
+    padding: 1.7rem 4.3rem 1.7rem 4.3rem;
     min-height: fit-content;
     height: fit-content;
 

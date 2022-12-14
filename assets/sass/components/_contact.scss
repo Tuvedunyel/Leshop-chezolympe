@@ -4,6 +4,11 @@
   width: 100%;
   float: unset;
   padding: 0;
+  pointer-events: none;
+}
+
+#main {
+  pointer-events: all;
 }
 
 .contact-rich {
