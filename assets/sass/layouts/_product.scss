@@ -843,3 +843,58 @@
   justify-content: center !important;
   align-items: center !important;
 }
+
+#criterions_list {
+  .star-content {
+    .star {
+      background: url(../img/notes.png) no-repeat 0 0 transparent;
+      background-position: -24px 0;
+
+      &:hover {
+        background-position: 0 0;
+      }
+    }
+
+    .star-on,
+    .star-hover {
+      background: url(../img/notes.png) no-repeat 0 0 transparent;
+    }
+  }
+}
+
+.post-comment-buttons.col-md-6 {
+  padding-bottom: 1.5rem;
+
+  .btn-comment-inverse {
+    background: transprant;
+    box-shadow: none;
+    border: 1px solid var.$mediumOrange;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    color: var.$mediumOrange;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background: var.$mediumOrange;
+      color: white;
+    }
+  }
+
+  .btn-comment {
+    background: var.$mediumOrange;
+    border: 1px solid var.$mediumOrange;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+
+    &:hover {
+      background: transparent;
+      color: var.$mediumOrange;
+    }
+  }
+}

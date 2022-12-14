@@ -216,6 +216,29 @@ if (App && productCategoiresFront) {
     App.appendChild(slide[0]);
   };
 
+  const handleSlide = (bulletPoint, bullet, size, slide) => {
+    leftTransform.classList.add("active");
+    rightTransform.classList.add("active");
+
+    setTimeout(() => {
+      rightTransform.classList.remove("active");
+    }, 1000);
+
+    setTimeout(() => {
+      leftTransform.classList.remove("active");
+    }, 1200);
+
+    setTimeout(() => {
+      slideImage(
+        bulletPoint,
+        Number(bullet.textContent),
+        Number(bullet.textContent) + 1,
+        size,
+        slide
+      );
+    }, 800);
+  };
+
   const createBulletPoint = (bulletPoint, size, slide, id) => {
     const bulletContainer = document.createElement("div");
     bulletContainer.classList.add("slider__bullet-container");
@@ -230,26 +253,7 @@ if (App && productCategoiresFront) {
       }
 
       bullet.addEventListener("click", () => {
-        leftTransform.classList.add("active");
-        rightTransform.classList.add("active");
-
-        setTimeout(() => {
-          rightTransform.classList.remove("active");
-        }, 1000);
-
-        setTimeout(() => {
-          leftTransform.classList.remove("active");
-        }, 1200);
-
-        setTimeout(() => {
-          slideImage(
-            bulletPoint,
-            Number(bullet.textContent),
-            Number(bullet.textContent) + 1,
-            size,
-            slide
-          );
-        }, 800);
+        handleSlide(bulletPoint, bullet, size, slide);
       });
     });
 
