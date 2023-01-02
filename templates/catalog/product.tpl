@@ -61,6 +61,18 @@
                         </div>
                     {/block}
 
+                    {if !empty(Manufacturer::getnamebyid($product.id_manufacturer))}
+                        <div class="brand">
+                            <p>Marque : </p>
+                            <p itemprop="brand">
+                                <a href="{$link->getManufacturerLink($product.id_manufacturer)|escape:'html':'UTF-8'}">
+                                    {Manufacturer::getnamebyid($product.id_manufacturer)|escape:'html':'UTF-8'}
+                                </a>
+                            </p>
+                        </div>
+                    {/if}
+
+
                     {if $product.is_customizable && count($product.customizations.fields)}
                         {block name='product_customization'}
                             {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
@@ -214,10 +226,36 @@
             </div>
             {/block}
 
-            <div class="entretien">
+            <div id="show-entretien">
+                {widget name='advancedcustomfields' hook='show_entretien'}
+            </div>
+
+            <div class="entretien" id="entretien">
                 <h3 id="entretien-handler">Entretien <span>+</span></h3>
                 <div id="entretien-content">
                     {widget name='advancedcustomfields' hook='entretien'}
+                </div>
+            </div>
+
+            <div id="show-strong">
+                {widget name='advancedcustomfields' hook='show_strong'}
+            </div>
+
+            <div class="entretien" id="strong-at">
+                <h3 id="strong-at__handler">Points forts <span>+</span></h3>
+                <div id="strong-at__content">
+                    {widget name='advancedcustomfields' hook='strong_at'}
+                </div>
+            </div>
+
+            <div id="show-ingredients">
+                {widget name='advancedcustomfields' hook='show_ingredients'}
+            </div>
+
+            <div class="entretien" id="ingredients">
+                <h3 id="ingredients-handler">Ingrédients <span>+</span></h3>
+                <div id="ingredients-content">
+                    {widget name='advancedcustomfields' hook='ingredients'}
                 </div>
             </div>
             {block name='product_footer'}

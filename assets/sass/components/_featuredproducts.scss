@@ -70,9 +70,13 @@
 
   .thumbnail-top {
     background: white;
-    padding: 2rem;
+    padding: 0;
     border-radius: 37px;
     position: relative;
+
+    img {
+      width: 100%;
+    }
   }
 
   form.custom-add-to-cart {

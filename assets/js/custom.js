@@ -25,6 +25,16 @@ const spanColor = document.querySelectorAll(
   ".input-container > label > .color"
 );
 const ratingLabel = document.querySelector(".criterion-rating > label");
+const entretien = document.getElementById("entretien");
+const showEntretien = document.getElementById("show-entretien");
+const showStrong = document.getElementById("show-strong");
+const strongAt = document.getElementById("strong-at");
+const strongAtHandler = document.getElementById("strong-at__handler");
+const strongAtContent = document.getElementById("strong-at__content");
+const ingredients = document.getElementById("ingredients");
+const showIngredients = document.getElementById("show-ingredients");
+const ingredientsHandler = document.getElementById("ingredients-handler");
+const ingredientsContent = document.getElementById("ingredients-content");
 
 if (ratingLabel) {
   ratingLabel.textContent = "Votre note : ";
@@ -352,6 +362,17 @@ if (plus && minus && quantity) {
   });
 }
 
+if (entretien && showEntretien.innerText === "Oui") {
+  entretien.classList.add("show");
+}
+
+if (strongAt && showStrong.innerText === "Oui") {
+  strongAt.classList.add("show");
+  showEntretien.innerText === "Oui"
+    ? strongAt.classList.add("no-border-top")
+    : null;
+}
+
 if (entretienHandler && entretienContent) {
   let isActive = false;
   entretienHandler.addEventListener("click", () => {
@@ -362,6 +383,41 @@ if (entretienHandler && entretienContent) {
       entretienHandler.innerHTML = "Entretien <span>-</span>";
     } else {
       entretienHandler.innerHTML = "Entretien <span>+</span>";
+    }
+  });
+}
+
+if (strongAtHandler && strongAtContent) {
+  let isActive = false;
+  strongAtHandler.addEventListener("click", () => {
+    strongAtContent.classList.toggle("active");
+    isActive = !isActive;
+
+    if (isActive) {
+      strongAtHandler.innerHTML = "Points forts <span>-</span>";
+    } else {
+      strongAtHandler.innerHTML = "Points forts <span>+</span>";
+    }
+  });
+}
+
+if (ingredients && showIngredients.innerText === "Oui") {
+  ingredients.classList.add("show");
+  showEntretien.innerText === "Oui" || showStrong.innerText === "Oui"
+    ? ingredients.classList.add("no-border-top")
+    : null;
+}
+
+if (ingredientsHandler && ingredientsContent) {
+  let isActive = false;
+  ingredientsHandler.addEventListener("click", () => {
+    ingredientsContent.classList.toggle("active");
+    isActive = !isActive;
+
+    if (isActive) {
+      ingredientsHandler.innerHTML = "Ingredients <span>-</span>";
+    } else {
+      ingredientsHandler.innerHTML = "Ingredients <span>+</span>";
     }
   });
 }

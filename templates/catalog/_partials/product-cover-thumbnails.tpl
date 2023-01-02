@@ -2,14 +2,14 @@
      {block name='product_cover'}
          <div class="product-cover">
              {if $product.default_image}
-                 <img class="js-qv-product-cover img-fluid" src="{$product.default_image.bySize.medium_default.url}"
+                 <img class="js-qv-product-cover img-fluid" src="{$product.default_image.bySize.large_default.url}"
                      {if !empty($product.default_image.legend)} alt="{$product.default_image.legend}"
                      title="{$product.default_image.legend}" {else} alt="{$product.name}" 
                      {/if} loading="lazy"
                      width="{$product.default_image.bySize.medium_default.width}"
                      height="{$product.default_image.bySize.medium_default.height}">
              {else}
-                 <img class="img-fluid" src="{$urls.no_picture_image.bySize.medium_default.url}" loading="lazy"
+                 <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}" loading="lazy"
                      width="{$urls.no_picture_image.bySize.medium_default.width}"
                      height="{$urls.no_picture_image.bySize.medium_default.height}">
              {/if}
