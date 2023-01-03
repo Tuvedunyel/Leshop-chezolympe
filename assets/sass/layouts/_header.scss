@@ -120,9 +120,15 @@
     a {
       font-family: var.$gallery;
       font-size: 22px;
-      font-weight: 400px;
+      font-weight: 400;
       color: var.$gray;
       transition: 0.3s ease-in-out;
+
+      &.dropdown-submenu {
+        font-family: var.$avenirLight;
+        font-weight: var.$light;
+        text-transform: initial;
+      }
 
       @include var.breakpoint(laptop) {
         font-size: 3.2rem;

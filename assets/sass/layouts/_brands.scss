@@ -1,0 +1,52 @@
+@use "../abstracts" as var;
+
+#main.brands {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 90%;
+  margin-top: 1.5rem;
+
+  h1 {
+    font-size: 4.6rem;
+    font-weight: 400;
+    font-family: var.$gallery;
+    color: black;
+    margin-bottom: 2rem;
+  }
+}
+
+.brand-miniature__custom {
+  max-width: 75%;
+  margin: 0 auto !important;
+
+  .brand {
+    width: fit-content !important;
+    height: fit-content !important;
+    background: transparent !important;
+
+    &:hover {
+      box-shadow: none !important;
+      border: none !important;
+    }
+  }
+
+  a {
+    background: var.$mediumOrange;
+    border: 1px solid var.$mediumOrange;
+    color: white;
+    font-size: 1.9rem;
+    font-weight: var.$normal;
+    font-family: var.$avenirRegular;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: white;
+      color: var.$mediumOrange;
+    }
+  }
+}

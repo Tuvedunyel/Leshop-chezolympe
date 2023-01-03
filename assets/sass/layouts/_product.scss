@@ -434,6 +434,10 @@
       color: var.$gray;
       text-align: center;
     }
+
+    li {
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -579,7 +583,7 @@
 #entretien-content,
 #strong-at__content,
 #ingredients-content {
-  margin-top: 1rem;
+  margin-block: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
