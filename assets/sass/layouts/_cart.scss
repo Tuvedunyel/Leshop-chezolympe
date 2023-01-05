@@ -10,6 +10,15 @@
   align-items: start;
   margin-bottom: 4rem;
 
+  @include var.breakpoint(tablet) {
+    .cart-grid-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+
   a.product-title-a {
     font-size: 3rem;
     font-family: var.$gallery;
@@ -84,6 +93,12 @@
     transition: 0.3s ease-in-out;
     border-radius: 10px;
     width: fit-content;
+
+    @include var.breakpoint(tablet) {
+      font-size: 2rem;
+      padding-block: 1rem;
+      align-self: end;
+    }
 
     &:hover {
       background: var.$mediumOrange;
@@ -328,6 +343,10 @@
   padding: 2rem 2rem;
   border-radius: 10px;
 
+  @include var.breakpoint(tablet) {
+    margin-top: 2rem;
+  }
+
   .cart-summary {
     display: flex;
     flex-direction: column;
@@ -335,6 +354,10 @@
     align-items: center;
     width: 100%;
     background: transparent;
+
+    @include var.breakpoint(tablet) {
+      flex-direction: column-reverse;
+    }
 
     .cart-detailed-totals {
       width: 100%;
@@ -380,6 +403,10 @@
 
   .checkout.cart-detailed-actions {
     margin-top: 3rem;
+
+    @include var.breakpoint(tablet) {
+      margin-top: 0;
+    }
 
     a {
       background: var.$mediumOrange;

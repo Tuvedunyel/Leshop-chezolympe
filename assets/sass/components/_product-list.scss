@@ -51,16 +51,14 @@
         }
       }
 
-      @include var.breakpoint(tablet) {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 3.2rem;
-        column-gap: 2.2rem;
-      }
-
       @include var.breakpoint(mobile) {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 2.2rem;
         column-gap: 0;
+      }
+
+      @include var.breakpoint(mini) {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -171,6 +169,10 @@
   max-width: 70%;
   margin: 0 auto;
 
+  @include var.breakpoint(tablet) {
+    margin: 0 0 0 2rem;
+  }
+
   .current-category {
     font-size: 4.6rem;
     color: black;
@@ -181,9 +183,12 @@
     margin-bottom: 10rem;
     display: flow-root;
 
+    @include var.breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+
     @include var.breakpoint(767px) {
       text-align: center;
-      margin-bottom: 4rem;
     }
   }
 
@@ -207,6 +212,14 @@
     align-items: start;
     margin-left: 1rem;
 
+    @include var.breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 0;
+      gap: 2rem;
+    }
+
     @include var.breakpoint(767px) {
       align-items: center;
       margin-left: 0;
@@ -224,9 +237,31 @@
         text-decoration: none;
       }
 
+      @include var.breakpoint(tablet) {
+        background: var.$mediumOrange;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid var.$mediumOrange;
+        padding: 1rem 2rem;
+
+        &:hover {
+          background: white;
+        }
+      }
+
       @include var.breakpoint(767px) {
         text-align: center;
       }
     }
+  }
+}
+
+#left-column.col-md-3 {
+  @include var.breakpoint(tablet) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
   }
 }

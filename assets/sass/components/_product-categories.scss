@@ -12,7 +12,7 @@ article.product-categories {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @include var.breakpoint(laptop) {
+  @include var.breakpoint(mobile) {
     grid-template-columns: 1fr;
   }
 
@@ -24,6 +24,12 @@ article.product-categories {
     @include var.breakpoint(laptop) {
       grid-column: 1;
       grid-row: 1;
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -32,6 +38,15 @@ article.product-categories {
     grid-row: 1;
 
     @include var.breakpoint(laptop) {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @include var.breakpoint(mobile) {
       grid-column: 1;
       grid-row: 1;
     }
@@ -51,6 +66,10 @@ article.product-categories {
     position: relative;
 
     @include var.breakpoint(laptop) {
+      align-items: center;
+    }
+
+    @include var.breakpoint(mobile) {
       padding-block: 5.8rem;
       align-items: center;
       grid-row: 2;
@@ -115,7 +134,7 @@ article.product-categories {
     transform: rotateY(180deg);
     background-size: cover;
 
-    @include var.breakpoint(658px) {
+    @include var.breakpoint(laptop) {
       display: none;
     }
   }

@@ -31,8 +31,22 @@
   #content {
     width: fit-content;
 
-    .image-container {
+    .images-container {
       width: fit-content;
+
+      @include var.breakpoint(tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        max-width: 75%;
+        margin: 0 auto;
+      }
+
+      @include var.breakpoint(mobile) {
+        flex-direction: column;
+        max-width: auto;
+        gap: 0;
+      }
     }
 
     .product-cover {
@@ -70,6 +84,10 @@
     right: -15%;
     bottom: -15%;
 
+    @include var.breakpoint(tablet) {
+      bottom: -10%;
+    }
+
     @include var.breakpoint(612px) {
       right: -2%;
     }
@@ -85,12 +103,25 @@
     z-index: 1;
     margin: 0;
 
+    @include var.breakpoint(tablet) {
+      overflow: initial !important;
+    }
+
     ul {
       display: flex;
       flex-direction: row;
       justify-content: start;
       align-items: center;
       gap: 1.1rem;
+
+      @include var.breakpoint(tablet) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      @include var.breakpoint(mobile) {
+        flex-direction: row;
+      }
 
       li {
         width: 63px;
