@@ -1,0 +1,91 @@
+@use "../abstracts" as var;
+
+.custom-pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-list {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include var.breakpoint(mini) {
+      flex-direction: column;
+    }
+  }
+
+  a {
+    height: fit-content;
+    display: inline-block;
+    line-height: initial;
+  }
+
+  .material-icons {
+    border: 1px solid var.$mediumOrange;
+    color: var.$mediumOrange;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 1rem 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    font-size: 3.2rem;
+
+    &:hover {
+      background: var.$mediumOrange;
+      color: white;
+    }
+
+    &.previous-icon {
+      margin-right: 1.7rem;
+
+      @include var.breakpoint(mini) {
+        margin-bottom: 1.7rem;
+      }
+    }
+
+    &.next-icon {
+      margin-left: 1.7rem;
+
+      @include var.breakpoint(mini) {
+        margin-top: 1.7rem;
+      }
+    }
+  }
+
+  .margin-inline:not(:last-of-type) {
+    margin-right: 1rem;
+
+    @include var.breakpoint(mini) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .page-number {
+    font-size: 3.2rem;
+    font-weight: var.$black;
+    font-family: var.$avenirRegular;
+    color: var.$gray;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: var.$mediumOrange;
+    }
+  }
+
+  .current .page-number {
+    color: var.$mediumOrange;
+  }
+}
