@@ -2,8 +2,8 @@
     {strip}
         {if $nodes|count}
             <div class="category-sub-menu__container">
-                <h2>Catégories</h2>
-                <ul class="category-sub-menu">
+                <h2 id="show-cat">Catégories</h2>
+                <ul class="category-sub-menu" id="sub-cat">
                     {foreach from=$nodes item=node}
                         <li data-depth="{$depth}">
                             {if $depth===0}

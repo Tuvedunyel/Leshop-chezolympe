@@ -201,9 +201,21 @@
     color: var.$mediumOrange;
     margin-bottom: 1.1rem;
     display: flow-root;
+    transition: 0.3s ease-in-out;
 
     @include var.breakpoint(767px) {
       text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: var.$gray;
+      }
+    }
+  }
+
+  .category-sub-menu__container {
+    @include var.breakpoint(767px) {
+      position: relative;
     }
   }
 
@@ -226,6 +238,16 @@
       align-items: center;
       flex-direction: column;
       margin-left: 0;
+      position: absolute;
+      transform: translateX(200%);
+      inset: 0;
+      transition: 0.5s ease-in-out;
+      top: 10%;
+      height: fit-content;
+
+      &.show {
+        transform: translateY(0);
+      }
     }
 
     a {

@@ -35,6 +35,11 @@ const ingredients = document.getElementById("ingredients");
 const showIngredients = document.getElementById("show-ingredients");
 const ingredientsHandler = document.getElementById("ingredients-handler");
 const ingredientsContent = document.getElementById("ingredients-content");
+const showCat = document.getElementById("show-cat");
+const subCat = document.getElementById("sub-cat");
+const catSubMenuContainer = document.querySelector(
+  ".category-sub-menu__container"
+);
 
 if (ratingLabel) {
   ratingLabel.textContent = "Votre note : ";
@@ -418,6 +423,19 @@ if (ingredientsHandler && ingredientsContent) {
       ingredientsHandler.innerHTML = "Ingredients <span>-</span>";
     } else {
       ingredientsHandler.innerHTML = "Ingredients <span>+</span>";
+    }
+  });
+}
+
+if (showCat && subCat) {
+  showCat.addEventListener("click", () => {
+    subCat.classList.toggle("show");
+    if (subCat.classList.contains("show")) {
+      catSubMenuContainer.style.height = `calc(50px + ${subCat.offsetHeight}px)`;
+    } else {
+      setTimeout(() => {
+        catSubMenuContainer.style.height = "fit-content";
+      }, 500);
     }
   });
 }

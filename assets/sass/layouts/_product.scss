@@ -550,6 +550,7 @@
 
   @include var.breakpoint(858px) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     place-items: center;
     gap: 2rem;
   }
