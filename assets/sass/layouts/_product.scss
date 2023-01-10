@@ -28,8 +28,18 @@
     }
   }
 
+  .description-container {
+    max-width: 97%;
+    margin-inline: auto;
+  }
+
   #content {
     width: fit-content;
+
+    @include var.breakpoint(mini) {
+      width: 97%;
+      margin-inline: auto;
+    }
 
     .images-container {
       width: fit-content;
@@ -108,19 +118,22 @@
     }
 
     ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      place-content: center;
       gap: 1.1rem;
 
       @include var.breakpoint(tablet) {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 65px);
         gap: 0.5rem;
       }
 
       @include var.breakpoint(mobile) {
-        flex-direction: row;
+        grid-template-columns: repeat(5, 65px);
+      }
+
+      @include var.breakpoint(mini) {
+        grid-template-columns: repeat(3, 65px);
       }
 
       li {
@@ -274,6 +287,12 @@
     justify-content: start;
     align-items: center;
     gap: 1.2rem;
+
+    @include var.breakpoint(550px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-content: center;
+    }
 
     li {
       width: 49px;
@@ -793,6 +812,11 @@
     padding: 1.7rem 4.3rem 1.7rem 4.3rem;
     min-height: fit-content;
     height: fit-content;
+
+    @include var.breakpoint(mini) {
+      font-size: 1.7rem;
+      padding: 1.7rem 2.3rem;
+    }
 
     &:hover {
       background: transparent;
