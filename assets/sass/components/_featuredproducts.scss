@@ -73,6 +73,7 @@
     padding: 0;
     border-radius: 37px;
     position: relative;
+    max-width: 302px;
 
     img {
       width: 100%;
@@ -98,6 +99,7 @@
     position: absolute;
     bottom: 5%;
     right: 8%;
+    display: none !important;
 
     li {
       font-size: 1.7rem;
@@ -145,9 +147,11 @@
     box-shadow: none !important;
     padding: 1rem;
     font-weight: 400;
+    background: transparent !important;
 
     i {
       font-weight: 400;
+      color: var.$mediumOrange !important;
     }
   }
 
