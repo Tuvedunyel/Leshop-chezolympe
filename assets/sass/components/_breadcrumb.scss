@@ -3,7 +3,10 @@
 #custom__breadcrumb {
   max-width: 90%;
   margin: 3rem auto 0 auto;
-  display: block !important;
+
+  &:not([data-depth="1"]) {
+    display: block !important;
+  }
 
   li::after {
     content: "" !important;
