@@ -278,8 +278,34 @@
     text-align: left;
   }
 
-  .select-to-change {
-    display: none !important;
+  ul#group_1 {
+    display: flex;
+    justify-content: start;
+    position: initial;
+    align-items: center;
+
+    input,
+    span {
+      border: 1px solid var.$gray;
+      border-radius: 10px;
+      padding: 1rem 3.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var.$gray;
+      font-size: 2rem;
+      font-family: var.$avenirLight;
+      font-weight: var.$light;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:checked,
+      &.active {
+        background: var.$mediumOrange;
+        color: white;
+        border-color: var.$mediumOrange;
+      }
+    }
   }
 
   .color-controller {

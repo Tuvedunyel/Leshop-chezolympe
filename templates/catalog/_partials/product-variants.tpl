@@ -12,11 +12,6 @@
                                 selected="selected" {/if}>{$group_attribute.name}</option>
                         {/foreach}
                     </select>
-                    <div class="btn-taille">
-                        {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                            <p class="btn-select" id="{$id_attribute}">{$group_attribute.name}</p>
-                        {/foreach}
-                    </div>
                 {elseif $group.group_type == 'color'}
                     <span class="control-label taille-texte" id="group-name">{$group.name}{l s=': ' d='Shop.Theme.Catalog'}
                         <span class="color-return">
@@ -43,6 +38,13 @@
                         {/foreach}
                     </ul>
                 {elseif $group.group_type == 'radio'}
+                    <span class="control-label taille-texte" id="group-name">{$group.name}{l s=': ' d='Shop.Theme.Catalog'}
+                        <span class="color-return">{foreach from=$group.attributes key=id_attribute item=group_attribute}
+                                {if $group_attribute.selected}{$group_attribute.name}
+                                {/if}
+                            {/foreach}
+                        </span>
+                    </span>
                     <ul id="group_{$id_attribute_group}">
                         {foreach from=$group.attributes key=id_attribute item=group_attribute}
                             <li class="input-container float-xs-left">

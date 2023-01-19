@@ -27,7 +27,7 @@
     <section id="main" class="product-page">
         <meta content="{$product.url}">
 
-        <div class="large-container">
+        <div class="large-container product-container ">
             {block name='page_content_container'}
                 <section class="product-content" id="content">
                     {block name='page_content'}

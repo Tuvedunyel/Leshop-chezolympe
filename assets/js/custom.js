@@ -8,9 +8,10 @@ const leftTransform = document.getElementById("left-transform");
 const productCategoiresFront = document.querySelector(
   "#product-categories__front > .large-container"
 );
+const taillesReturn = document.querySelectorAll(
+  "#group_1 > li > label > .radio-label"
+);
 const seeAll = document.getElementById("see-all");
-const btnSelect = document.querySelectorAll(".btn-select");
-const selectToChange = document.querySelector(".select-to-change");
 const colorInput = document.querySelectorAll(
   ".color-controller > li > label > input"
 );
@@ -40,6 +41,17 @@ const subCat = document.getElementById("sub-cat");
 const catSubMenuContainer = document.querySelector(
   ".category-sub-menu__container"
 );
+
+const isSameTaille = () => {
+  let tailles = document.querySelector(".taille-texte > .color-return");
+  console.log(tailles.innerText);
+  for (const tailleReturn of taillesReturn) {
+    tailleReturn.classList.remove("active");
+    if (tailles.innerText === tailleReturn.innerText) {
+      tailleReturn.classList.add("active");
+    }
+  }
+};
 
 if (ratingLabel) {
   ratingLabel.textContent = "Votre note : ";
@@ -310,28 +322,21 @@ if (seeAll) {
   });
 }
 
-if (selectToChange) {
-  btnSelect[0].classList.add("active");
-  const checkId = () => {
-    btnSelect.forEach((btn) => {
-      if (btn.id !== selectToChange.value) {
-        btn.classList.remove("active");
-      }
-    });
-  };
-  btnSelect.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      selectToChange.value = btn.id;
-      btn.classList.add("active");
-      checkId();
-    });
-  });
+if (taillesReturn) {
+  isSameTaille();
 }
+
+document.body.addEventListener("change", () => {
+  if (taillesReturn) {
+    isSameTaille();
+  }
+});
 
 if (colorInput && colorReturn) {
   const removeBorder = (style = "none", index = null) => {
     for (element of inputContainer) {
       element.style.border = "none";
+      element.style.borderColor = "transparent !important";
     }
     if (style !== "none") {
       inputContainer[index].style.border = `${style}`;
