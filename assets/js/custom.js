@@ -8,20 +8,16 @@ const leftTransform = document.getElementById("left-transform");
 const productCategoiresFront = document.querySelector(
   "#product-categories__front > .large-container"
 );
-const taillesReturn = document.querySelectorAll(
-  "#group_1 > li > label > .radio-label"
-);
 const seeAll = document.getElementById("see-all");
 const colorInput = document.querySelectorAll(
   ".color-controller > li > label > input"
 );
-const colorReturn = document.querySelector(".color-return");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
 const quantity = document.getElementById("quantity_wanted");
 const entretienHandler = document.getElementById("entretien-handler");
 const entretienContent = document.getElementById("entretien-content");
-const inputContainer = document.querySelectorAll(".input-container");
+const inputContainer = document.querySelectorAll(".color-input-container");
 const spanColor = document.querySelectorAll(
   ".input-container > label > .color"
 );
@@ -42,16 +38,48 @@ const catSubMenuContainer = document.querySelector(
   ".category-sub-menu__container"
 );
 
-const isSameTaille = () => {
-  let tailles = document.querySelector(".taille-texte > .color-return");
-  console.log(tailles.innerText);
-  for (const tailleReturn of taillesReturn) {
-    tailleReturn.classList.remove("active");
-    if (tailles.innerText === tailleReturn.innerText) {
-      tailleReturn.classList.add("active");
-    }
+const removeBorder = (style = "none", index = null) => {
+  for (element of inputContainer) {
+    element.classList.add("remove-border");
+    element.style.border = "0px solid transparent";
+  }
+  if (style !== "none") {
+    inputContainer[index].classList.remove("remove-border");
+    inputContainer[index].style.border = `${style}`;
   }
 };
+
+const setTaille = () => {
+  let tailles = document.querySelectorAll(
+    "#group_1 > li > label > .radio-label"
+  );
+  if (tailles) {
+    tailles.forEach((item) => {
+      item.classList.remove("active");
+      if (window.location.hash.includes(`${item.innerText.toLowerCase()}/`)) {
+        item.classList.add("active");
+      }
+    });
+  }
+};
+
+setTaille();
+
+prestashop.on("updatedProduct", () => {
+  setTimeout(() => {
+    setTaille();
+
+    let colorReturn = document.querySelector(".color-return");
+
+    if (colorInput && colorReturn) {
+      for (let i = 0; i < colorInput.length; i++) {
+        if (colorInput[i].title === colorReturn.innerText) {
+          removeBorder(`1px solid ${spanColor[i].style.backgroundColor}`, i);
+        }
+      }
+    }
+  }, 1000);
+});
 
 if (ratingLabel) {
   ratingLabel.textContent = "Votre note : ";
@@ -322,33 +350,12 @@ if (seeAll) {
   });
 }
 
-if (taillesReturn) {
-  isSameTaille();
-}
-
-document.body.addEventListener("change", () => {
-  if (taillesReturn) {
-    isSameTaille();
-  }
-});
-
-if (colorInput && colorReturn) {
-  const removeBorder = (style = "none", index = null) => {
-    for (element of inputContainer) {
-      element.style.border = "none";
-      element.style.borderColor = "transparent !important";
-    }
-    if (style !== "none") {
-      inputContainer[index].style.border = `${style}`;
-    }
-  };
-
+if (colorInput) {
+  let colorReturn = document.querySelector(".color-return");
   for (let i = 0; i < colorInput.length; i++) {
-    removeBorder();
-    colorInput[i].addEventListener("click", (e) => {
+    if (colorInput[i].title === colorReturn.innerText) {
       removeBorder(`1px solid ${spanColor[i].style.backgroundColor}`, i);
-      colorReturn.textContent = e.target.title;
-    });
+    }
   }
 }
 

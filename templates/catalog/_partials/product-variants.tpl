@@ -14,15 +14,14 @@
                     </select>
                 {elseif $group.group_type == 'color'}
                     <span class="control-label taille-texte" id="group-name">{$group.name}{l s=': ' d='Shop.Theme.Catalog'}
-                        <span class="color-return">
-                            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                                {if $group_attribute.selected}{$group_attribute.name}{/if}
-                            {/foreach}
-                        </span>
+                        <span class="color-return">{foreach from=$group.attributes key=id_attribute item=group_attribute}
+                                {if $group_attribute.selected}{$group_attribute.name}
+                                {/if}
+                            {/foreach}</span>
                     </span>
                     <ul id="group_{$id_attribute_group}" class="color-controller">
                         {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                            <li class="float-xs-left input-container" {if $group_attribute.html_color_code}
+                            <li class="float-xs-left input-container color-input-container" {if $group_attribute.html_color_code}
                                 style="border-color: {$group_attribute.html_color_code}" {/if}>
                                 <label aria-label="{$group_attribute.name}">
                                     <input class="input-color" type="radio" data-product-attribute="{$id_attribute_group}"
@@ -39,7 +38,7 @@
                     </ul>
                 {elseif $group.group_type == 'radio'}
                     <span class="control-label taille-texte" id="group-name">{$group.name}{l s=': ' d='Shop.Theme.Catalog'}
-                        <span class="color-return">{foreach from=$group.attributes key=id_attribute item=group_attribute}
+                        <span class="taille-return">{foreach from=$group.attributes key=id_attribute item=group_attribute}
                                 {if $group_attribute.selected}{$group_attribute.name}
                                 {/if}
                             {/foreach}

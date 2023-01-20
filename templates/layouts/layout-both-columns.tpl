@@ -138,7 +138,7 @@
                     <ul class="benefits-list">
                         <li>
                             <img src="{$urls.img_url}camion.svg" alt="Illustration d'un camion">
-                            <p>Livraison rapide et gratuite dès 99€</p>
+                            <p>Livraison rapide et gratuite dès 86€</p>
                         </li>
                         <li>
                             <img src="{$urls.img_url}cb.svg" alt="Illustration d'une carte bleue">

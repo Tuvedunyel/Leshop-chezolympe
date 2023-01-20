@@ -9,6 +9,11 @@
   width: min(1400px, 85%);
   margin-top: 3.5rem;
 
+  .color-input-container.remove-border {
+    border: none !important;
+    border-color: transparent !important;
+  }
+
   @include var.breakpoint(laptop) {
     grid-template-columns: 1fr;
     gap: 5rem;
@@ -284,7 +289,6 @@
     position: initial;
     align-items: center;
 
-    input,
     span {
       border: 1px solid var.$gray;
       border-radius: 10px;
@@ -299,7 +303,7 @@
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
-      &:checked,
+      &:hover,
       &.active {
         background: var.$mediumOrange;
         color: white;
