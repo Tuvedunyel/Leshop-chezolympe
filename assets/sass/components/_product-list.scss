@@ -58,10 +58,6 @@
         row-gap: 2.2rem;
         column-gap: 0;
       }
-
-      @include var.breakpoint(mini) {
-        grid-template-columns: 1fr;
-      }
     }
 
     .top-commu {

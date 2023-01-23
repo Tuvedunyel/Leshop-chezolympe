@@ -134,6 +134,10 @@
       color: var.$gray;
       transition: 0.3s ease-in-out;
 
+      i {
+        display: none !important;
+      }
+
       &.dropdown-submenu {
         font-family: var.$avenirLight;
         font-weight: var.$light;
