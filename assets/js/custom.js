@@ -65,7 +65,7 @@ const setTaille = () => {
 
 setTaille();
 
-prestashop.on("updatedProduct", () => {
+prestashop.on("updateProduct", () => {
   setTimeout(() => {
     setTaille();
 
@@ -78,7 +78,7 @@ prestashop.on("updatedProduct", () => {
         }
       }
     }
-  }, 1000);
+  }, 500);
 });
 
 if (ratingLabel) {
